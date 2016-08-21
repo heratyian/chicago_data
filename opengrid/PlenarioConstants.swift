@@ -10,10 +10,27 @@ import Foundation
 
 extension PlenarioClient {
     
-    struct Constants {
+    struct Plenario {
         static let APIScheme = "http"
         static let APIHost = "plenar.io"
         static let APIPath = "/v1/api/detail/"
+    }
+    
+    struct ParameterKeys {
+        static let DatasetName = "dataset_name"
+        static let LocationGeomWithin = "location_geom__within"
+    }
+    
+    struct ParameterValues {
+        static let DatasetNameCrime = "crimes_2001_to_present"
+    }
+    
+    struct ResponseKeys {
+        
+    }
+    
+    struct ResponseValues {
+        
     }
     
 }
