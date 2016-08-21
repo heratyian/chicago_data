@@ -8,11 +8,19 @@
 
 import UIKit
 import GeoJSON
+import MapKit
 
 class MapViewController: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
+    var locationManager: CLLocationManager!
+    var placemark: MKPlacemark?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let hardCodedCity = "Chicago, IL"
+        self.setLocation(hardCodedCity)
         
         /* Create geo json dict */
         // bottom left
@@ -37,6 +45,41 @@ class MapViewController: UIViewController {
         let url = plenarioURLFromParameters(methodParameters)
         
         print(url)
+    }
+    
+    private func setLocation(city: String) {
+        let geocoder = CLGeocoder()
+        
+        
+        geocoder.geocodeAddressString(city) { (placemarks, error) in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let placemarks = placemarks else {
+                print("could not find placemarks")
+                return
+            }
+            
+            guard placemarks.count > 0 else {
+                print("no results")
+                return
+            }
+            
+            let topResult: CLPlacemark = placemarks[0]
+            self.placemark = MKPlacemark(placemark: topResult)
+            
+            var region: MKCoordinateRegion = self.mapView.region
+            region.center = (self.placemark!.location?.coordinate)!
+            region.span.longitudeDelta /= 1200.0
+            region.span.latitudeDelta /= 1200.0
+            self.mapView.setRegion(region, animated: true)
+            self.mapView.addAnnotation(self.placemark!)
+        }
+        
+        
     }
     
     private func geoJSONPolygonStringFromCoordinates(bottomLeft: [Double], topRight: [Double]) -> String {

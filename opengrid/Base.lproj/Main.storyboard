@@ -16,12 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-0W-T9B">
+                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-G9-Jcm">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="540"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="14M-fn-iFM">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="540"/>
+                                                <subviews>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1B5-Wk-xXE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="540"/>
+                                                    </mapView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3lE-0W-T9B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="BBY-gS-Y2x"/>
+                            <constraint firstItem="3lE-0W-T9B" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="LcE-lD-evN"/>
+                            <constraint firstAttribute="trailing" secondItem="3lE-0W-T9B" secondAttribute="trailing" id="c7n-tX-qsx"/>
+                            <constraint firstItem="3lE-0W-T9B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nCD-sV-3bw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="1B5-Wk-xXE" id="d4c-vq-4gD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="200" y="330.86000000000001"/>
+            <point key="canvasLocation" x="200" y="330"/>
         </scene>
     </scenes>
 </document>
