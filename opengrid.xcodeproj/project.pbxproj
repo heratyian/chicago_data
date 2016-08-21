@@ -19,6 +19,7 @@
 		CDA1F6661D694D3000EBF31B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA1F6641D694D3000EBF31B /* LaunchScreen.storyboard */; };
 		CDA1F6711D694D3000EBF31B /* opengridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1F6701D694D3000EBF31B /* opengridTests.swift */; };
 		CDA1F67C1D694D3000EBF31B /* opengridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1F67B1D694D3000EBF31B /* opengridUITests.swift */; };
+		CDCD4C0C1D6A6DF20018C21F /* PlenarioDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD4C0B1D6A6DF20018C21F /* PlenarioDataPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CDA1F6771D694D3000EBF31B /* opengridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opengridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA1F67B1D694D3000EBF31B /* opengridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opengridUITests.swift; sourceTree = "<group>"; };
 		CDA1F67D1D694D3000EBF31B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCD4C0B1D6A6DF20018C21F /* PlenarioDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlenarioDataPoint.swift; sourceTree = "<group>"; };
 		CED2D2D97ADDA12A159B5468 /* Pods-opengrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opengrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-opengrid/Pods-opengrid.release.xcconfig"; sourceTree = "<group>"; };
 		E41531FF68DB420DC64C97DF /* Pods_opengrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_opengrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 				CD52CE631D69566700E6ED5D /* PlenarioConstants.swift */,
 				CD52CE651D69567F00E6ED5D /* PlenarioConvenience.swift */,
 				CD52CE671D69568F00E6ED5D /* PlenarioClient.swift */,
+				CDCD4C0B1D6A6DF20018C21F /* PlenarioDataPoint.swift */,
 			);
 			name = plenario;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				CD52CE681D69568F00E6ED5D /* PlenarioClient.swift in Sources */,
 				CD52CE661D69567F00E6ED5D /* PlenarioConvenience.swift in Sources */,
 				CDA1F65C1D694D3000EBF31B /* AppDelegate.swift in Sources */,
+				CDCD4C0C1D6A6DF20018C21F /* PlenarioDataPoint.swift in Sources */,
 				CD52CE621D69560D00E6ED5D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

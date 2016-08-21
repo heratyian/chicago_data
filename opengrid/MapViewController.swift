@@ -58,6 +58,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print(url)
         
         
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
