@@ -10,41 +10,68 @@ import UIKit
 import GeoJSON
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
+    
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
     var placemark: MKPlacemark?
     
+    @IBAction func touchedMyButton(sender: AnyObject) {
+        let centerCoordinate = CLLocationCoordinate2DMake(self.mapView.region.center.latitude, self.mapView.region.center.longitude)
+        
+//        CLLocationCoordinate2D(latitude: 41.883229, longitude: -87.632397999999995)
+        print(centerCoordinate)
+        
+        
+        // call plenario api
+        
+        // get bottom / left
+        // get top / right
+        let latD = self.mapView.region.span.latitudeDelta
+        let longD = self.mapView.region.span.longitudeDelta
+        
+        let lat1 = centerCoordinate.latitude + latD/2
+        let lat2 = centerCoordinate.latitude - latD/2
+        let long1 = centerCoordinate.longitude + longD
+        let long2 = centerCoordinate.longitude - longD
+        
+        
+        // origin = lat1, long2
+        // sw = lat2, long2
+        // ne = lat1, long1
+        let sw = [long2,lat2]
+        let ne = [long1,lat1]
+        print(sw)
+        print(ne)
+        
+        let geoJSONString = geoJSONPolygonStringFromCoordinates(sw, topRight: ne)
+        print(geoJSONString)
+        
+
+        /* create URL */
+        
+        let methodParameters: [String: AnyObject!] = [ PlenarioClient.ParameterKeys.LocationGeomWithin : geoJSONString ]
+        
+        let url = plenarioURLFromParameters(methodParameters)
+        
+        print(url)
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
         
         let hardCodedCity = "Chicago, IL"
         self.setLocation(hardCodedCity)
         
-        /* Create geo json dict */
-        // bottom left
-        let CERMAK_ASHLAND = [-87.66643524169922, 41.86681241363702]
-        // top right
-        let ROOSEVELT_CANAL = [-87.639255, 41.866802]
-
         
-//        let coordinate_a = [-87.66600608825684,41.85226942321293] top right
-//        let coordinate_b = [-87.66643524169922,41.86687633156873] bottom right
-//        let coordinate_c = [-87.63918399810791,41.867259837816974] bottom left
-//        let coordinate_d = [-87.6384973526001,41.85271694915769] top left
-        
-//        let coordinates = [coordinate_a, coordinate_b, coordinate_c, coordinate_d, coordinate_a]
-        
-        let geoJSONDictionaryString = geoJSONPolygonStringFromCoordinates(CERMAK_ASHLAND, topRight: ROOSEVELT_CANAL)
-        
-        /* create URL */
-        
-        let methodParameters: [String: AnyObject!] = [ PlenarioClient.ParameterKeys.LocationGeomWithin : geoJSONDictionaryString ]
-       
-        let url = plenarioURLFromParameters(methodParameters)
-        
-        print(url)
     }
     
     private func setLocation(city: String) {
@@ -73,8 +100,8 @@ class MapViewController: UIViewController {
             
             var region: MKCoordinateRegion = self.mapView.region
             region.center = (self.placemark!.location?.coordinate)!
-            region.span.longitudeDelta /= 1200.0
-            region.span.latitudeDelta /= 1200.0
+            region.span.longitudeDelta /= 2200.0
+            region.span.latitudeDelta /= 2200.0
             self.mapView.setRegion(region, animated: true)
             self.mapView.addAnnotation(self.placemark!)
         }
@@ -96,8 +123,6 @@ class MapViewController: UIViewController {
         print(geoJSONDictionary)
         return geoJSONDictionary
     }
-    
-    
     
     private func plenarioURLFromParameters(parameters: [String:AnyObject]) -> NSURL {
         // take parameters, return url
