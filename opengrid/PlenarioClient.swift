@@ -15,8 +15,9 @@ class PlenarioClient: NSObject {
     
     func taskForGetMethod(parameters: [String:String], completionHandlerForGET: (result: AnyObject!, error: NSError?) -> Void) -> NSURLSessionTask {
         
-        print(parameters)
+//        print(parameters)
         let url = plenarioURLFromParameters(parameters)
+        print(url)
         let request = NSMutableURLRequest(URL: url)
         
         /* 4. Make the request */
@@ -46,10 +47,8 @@ class PlenarioClient: NSObject {
                 return
             }
             
-            let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
-            
             /* 5/6. Parse the data and use the data (happens in completion handler) */
-            self.convertDataWithCompletionHandler(newData, completionHandlerForConvertData: completionHandlerForGET)
+            self.convertDataWithCompletionHandler(data, completionHandlerForConvertData: completionHandlerForGET)
         }
         
         /* 7. Start the request */
