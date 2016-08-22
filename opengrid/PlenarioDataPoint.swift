@@ -16,6 +16,7 @@ struct PlenarioDataPoint {
     
     // MARK: Initializers
     init(dictionary: [String:AnyObject]) {
+        
         latitude = dictionary[PlenarioClient.ResponseKeys.Latitude] as! Double
         longitude = dictionary[PlenarioClient.ResponseKeys.Longitude] as! Double
         caseNumber = dictionary[PlenarioClient.ResponseKeys.CaseNumber] as! String
@@ -24,8 +25,10 @@ struct PlenarioDataPoint {
     static func pointsFromResults(results: [[String:AnyObject]]) -> [PlenarioDataPoint] {
         
         var points = [PlenarioDataPoint]()
-        
+
         for result in results {
+            print(result)
+            print(result["case_number"])
             points.append(PlenarioDataPoint(dictionary: result))
         }
         

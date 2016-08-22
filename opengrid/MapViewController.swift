@@ -12,10 +12,11 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
-    
+    /* MARK: Properties */
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
     var placemark: MKPlacemark?
+    var points: [PlenarioDataPoint] = [PlenarioDataPoint]()
     
     @IBAction func touchedMyButton(sender: AnyObject) {
         let centerCoordinate = CLLocationCoordinate2DMake(self.mapView.region.center.latitude, self.mapView.region.center.longitude)
@@ -60,7 +61,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         getDataPoints(geoJSONString)
         
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,10 +73,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         let hardCodedCity = "Chicago, IL"
         self.setLocation(hardCodedCity)
-        
-        
     }
     
+    
+    // todo: if user location, set to user current location, else chicago downtown
     private func setLocation(city: String) {
         let geocoder = CLGeocoder()
         
@@ -133,13 +133,31 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 print(error)
             } else {
                 if let points = points {
+                    self.points = points
                     print("success")
+                    for point in self.points {
+                        self.createAnnotationWithDataPoint(point)
+                    }
                 } else {
                     print("fail")
                 }
             }
         }
     }
+    
+    private func createAnnotationWithDataPoint(dataPoint: PlenarioDataPoint) {
+        
+        var coordinate = CLLocationCoordinate2DMake(dataPoint.latitude, dataPoint.longitude)
+        
+        var annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        annotation.title = dataPoint.caseNumber
+//        anotation.subtitle = "This is the location !!!"
+        self.mapView.addAnnotation(annotation)
+
+    }
+    
+    
 //    private func plenarioURLFromParameters(parameters: [String:AnyObject]) -> NSURL {
 //        // take parameters, return url
 //        
