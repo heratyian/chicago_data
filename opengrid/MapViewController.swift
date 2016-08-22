@@ -51,13 +51,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
         /* create URL */
         
-        let methodParameters: [String: AnyObject!] = [ PlenarioClient.ParameterKeys.LocationGeomWithin : geoJSONString ]
+//        let methodParameters: [String: AnyObject!] = [ PlenarioClient.ParameterKeys.LocationGeomWithin : geoJSONString ]
+//        
+//        let url = plenarioURLFromParameters(methodParameters)
+//        
+//        print(url)
         
-        let url = plenarioURLFromParameters(methodParameters)
         
-        print(url)
-        
-        
+        getDataPoints(geoJSONString)
         
         
     }
@@ -126,27 +127,40 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         return geoJSONDictionary
     }
     
-    private func plenarioURLFromParameters(parameters: [String:AnyObject]) -> NSURL {
-        // take parameters, return url
-        
-        
-        let components = NSURLComponents()
-        components.scheme = PlenarioClient.Plenario.APIScheme
-        components.host = PlenarioClient.Plenario.APIHost
-        components.path = PlenarioClient.Plenario.APIPath
-        
-        components.queryItems = [NSURLQueryItem]()
-        
-        let queryItem = NSURLQueryItem(name: PlenarioClient.ParameterKeys.DatasetName, value: "\(PlenarioClient.ParameterValues.DatasetNameCrime)")
-        components.queryItems!.append(queryItem)
-        
-        for (key, value) in parameters {
-            let queryItem = NSURLQueryItem(name: key, value: "\(value)")
-            components.queryItems!.append(queryItem)
+    private func getDataPoints(geoJSONString: String) {
+        PlenarioClient.sharedInstance().getLocations(geoJSONString) { (points, error) in
+            if let error = error {
+                print(error)
+            } else {
+                if let points = points {
+                    print("success")
+                } else {
+                    print("fail")
+                }
+            }
         }
-        
-        return components.URL!
     }
+//    private func plenarioURLFromParameters(parameters: [String:AnyObject]) -> NSURL {
+//        // take parameters, return url
+//        
+//        
+//        let components = NSURLComponents()
+//        components.scheme = PlenarioClient.Plenario.APIScheme
+//        components.host = PlenarioClient.Plenario.APIHost
+//        components.path = PlenarioClient.Plenario.APIPath
+//        
+//        components.queryItems = [NSURLQueryItem]()
+//        
+//        let queryItem = NSURLQueryItem(name: PlenarioClient.ParameterKeys.DatasetName, value: "\(PlenarioClient.ParameterValues.DatasetNameCrime)")
+//        components.queryItems!.append(queryItem)
+//        
+//        for (key, value) in parameters {
+//            let queryItem = NSURLQueryItem(name: key, value: "\(value)")
+//            components.queryItems!.append(queryItem)
+//        }
+//        
+//        return components.URL!
+//    }
 
 
     

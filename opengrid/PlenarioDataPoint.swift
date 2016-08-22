@@ -10,36 +10,26 @@ import Foundation
 
 struct PlenarioDataPoint {
     // MARK: Properties
-    var firstName: String
-    var lastName: String
     var latitude: Double
     var longitude: Double
-    var mapString: String
-    var mediaURL: String
-    var objectID: String?
-    var uniqueKey: String
+    var caseNumber: String
     
     // MARK: Initializers
     init(dictionary: [String:AnyObject]) {
-        firstName = dictionary[ParseClient.JSONResponseKeys.firstName] as! String
-        lastName = dictionary[ParseClient.JSONResponseKeys.lastName] as! String
-        latitude = dictionary[ParseClient.JSONResponseKeys.latitude] as! Double
-        longitude = dictionary[ParseClient.JSONResponseKeys.longitude] as! Double
-        mediaURL = dictionary[ParseClient.JSONResponseKeys.mediaURL] as! String
-        objectID = dictionary[ParseClient.JSONResponseKeys.objectID] as? String
-        mapString = dictionary[ParseClient.JSONResponseKeys.mapString] as! String
-        uniqueKey = dictionary[ParseClient.JSONResponseKeys.uniqueKey] as! String
+        latitude = dictionary[PlenarioClient.ResponseKeys.Latitude] as! Double
+        longitude = dictionary[PlenarioClient.ResponseKeys.Longitude] as! Double
+        caseNumber = dictionary[PlenarioClient.ResponseKeys.CaseNumber] as! String
     }
     
-    static func studentsFromResults(results: [[String:AnyObject]]) -> [ParseStudent] {
+    static func pointsFromResults(results: [[String:AnyObject]]) -> [PlenarioDataPoint] {
         
-        var students = [ParseStudent]()
+        var points = [PlenarioDataPoint]()
         
         for result in results {
-            students.append(ParseStudent(dictionary: result))
+            points.append(PlenarioDataPoint(dictionary: result))
         }
         
-        return students
+        return points
     }
 }
 
@@ -47,5 +37,5 @@ struct PlenarioDataPoint {
 extension PlenarioDataPoint: Equatable {}
 
 func ==(lhs: PlenarioDataPoint, rhs: PlenarioDataPoint) -> Bool {
-    return lhs.objectID == rhs.objectID
+    return lhs.caseNumber == rhs.caseNumber
 }

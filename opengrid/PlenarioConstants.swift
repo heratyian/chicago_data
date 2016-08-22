@@ -26,6 +26,7 @@ extension PlenarioClient {
     }
     
     struct ResponseKeys {
+        static let Objects = "objects"
         static let ID = "id"
         static let CaseNumber = "case_number"
         static let Date = "date"

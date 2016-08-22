@@ -13,10 +13,10 @@ class PlenarioClient: NSObject {
     // shared session
     var session = NSURLSession.sharedSession()
     
-    func taskForGetMethod(method: String, completionHandlerForGET: (result: AnyObject!, error: NSError?) -> Void) -> NSURLSessionTask {
+    func taskForGetMethod(parameters: [String:String], completionHandlerForGET: (result: AnyObject!, error: NSError?) -> Void) -> NSURLSessionTask {
         
-        print(method)
-        let url = plenarioURLFromPathExtension(method)
+        print(parameters)
+        let url = plenarioURLFromParameters(parameters)
         let request = NSMutableURLRequest(URL: url)
         
         /* 4. Make the request */
@@ -73,17 +73,28 @@ class PlenarioClient: NSObject {
         completionHandlerForConvertData(result: parsedResult, error: nil)
     }
     
-    // create a URL from parameters
-    private func plenarioURLFromPathExtension(pathExtension: String? = nil) -> NSURL {
+    private func plenarioURLFromParameters(parameters: [String:AnyObject]) -> NSURL {
+        // take parameters, return url
+        
         
         let components = NSURLComponents()
         components.scheme = PlenarioClient.Plenario.APIScheme
         components.host = PlenarioClient.Plenario.APIHost
-        components.path = PlenarioClient.Plenario.APIPath + (pathExtension ?? "")
+        components.path = PlenarioClient.Plenario.APIPath
         
+        components.queryItems = [NSURLQueryItem]()
+        
+        let queryItem = NSURLQueryItem(name: PlenarioClient.ParameterKeys.DatasetName, value: "\(PlenarioClient.ParameterValues.DatasetNameCrime)")
+        components.queryItems!.append(queryItem)
+        
+        for (key, value) in parameters {
+            let queryItem = NSURLQueryItem(name: key, value: "\(value)")
+            components.queryItems!.append(queryItem)
+        }
         
         return components.URL!
     }
+
     
     // MARK: Shared Instance
     class func sharedInstance() -> PlenarioClient {
