@@ -13,6 +13,8 @@ struct PlenarioDataPoint {
     var latitude: Double!
     var longitude: Double!
     var caseNumber: String!
+    var primaryType: String!
+    var description: String!
     
     // MARK: Initializers
     init(dictionary: [String:AnyObject]) {
@@ -20,6 +22,9 @@ struct PlenarioDataPoint {
         latitude = dictionary[PlenarioClient.ResponseKeys.Latitude] as! Double
         longitude = dictionary[PlenarioClient.ResponseKeys.Longitude] as! Double
         caseNumber = dictionary[PlenarioClient.ResponseKeys.CaseNumber] as! String
+        primaryType = dictionary[PlenarioClient.ResponseKeys.PrimaryType] as! String
+        description = dictionary[PlenarioClient.ResponseKeys.Description] as! String
+        
         
     }
     

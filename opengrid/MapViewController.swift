@@ -113,8 +113,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         var annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
-        annotation.title = dataPoint.caseNumber
-//        anotation.subtitle = "This is the location !!!"
+        annotation.title = dataPoint.primaryType
+        annotation.subtitle = dataPoint.description
         self.mapView.addAnnotation(annotation)
 
     }
