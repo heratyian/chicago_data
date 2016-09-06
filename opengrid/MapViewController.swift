@@ -35,7 +35,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         self.setLocation(hardCodedCity)
     }
     
-    @IBAction func touchedMyButton(sender: AnyObject) {
+
+    
+    private func queryDatabase() {
+        // query plenario api
         
         let centerCoordinate = CLLocationCoordinate2DMake(self.mapView.region.center.latitude, self.mapView.region.center.longitude)
         let latD = self.mapView.region.span.latitudeDelta
@@ -46,7 +49,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 print(error)
             } else {
                 if let points = points {
-//                    self.points = points
+                    //                    self.points = points
                     for point in points {
                         print(point.caseNumber)
                         self.createAnnotationWithDataPoint(point)
@@ -57,9 +60,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 }
             }
         })
-        
-        
-        
     }
     
     private func initLocationManager() {

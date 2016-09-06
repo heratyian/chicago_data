@@ -16,6 +16,25 @@ struct PlenarioDataPoint {
     var primaryType: String!
     var description: String!
     
+//    static let ID = "id"
+//    static let Date = "date"
+//    static let Block = "block"
+//    static let IUCR = "iucr"
+//    static let LocationDescription = "location_description"
+//    static let Arrest = "arrest"
+//    static let Domestic = "domestic"
+//    static let Beat = "beat"
+//    static let District = "district"
+//    static let Ward = "ward"
+//    static let CommunityArea = "community_area"
+//    static let FBICode = "fbi_code"
+//    static let XCoordinate = "x_coordinate"
+//    static let YCoordinate = "y_coordinate"
+//    static let Year = "year"
+//    static let UpdatedOn = "updated_on"
+//    static let Location = "location"
+    
+    
     // MARK: Initializers
     init(dictionary: [String:AnyObject]) {
         

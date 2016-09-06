@@ -12,6 +12,7 @@
 		CD52CE641D69566700E6ED5D /* PlenarioConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52CE631D69566700E6ED5D /* PlenarioConstants.swift */; };
 		CD52CE661D69567F00E6ED5D /* PlenarioConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52CE651D69567F00E6ED5D /* PlenarioConvenience.swift */; };
 		CD52CE681D69568F00E6ED5D /* PlenarioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52CE671D69568F00E6ED5D /* PlenarioClient.swift */; };
+		CD865A8B1D70DDFA0049424E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD865A8A1D70DDFA0049424E /* SettingsViewController.swift */; };
 		CDA1F65C1D694D3000EBF31B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1F65B1D694D3000EBF31B /* AppDelegate.swift */; };
 		CDA1F65E1D694D3000EBF31B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1F65D1D694D3000EBF31B /* MapViewController.swift */; };
 		CDA1F6611D694D3000EBF31B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA1F65F1D694D3000EBF31B /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		CD52CE631D69566700E6ED5D /* PlenarioConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlenarioConstants.swift; sourceTree = "<group>"; };
 		CD52CE651D69567F00E6ED5D /* PlenarioConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlenarioConvenience.swift; sourceTree = "<group>"; };
 		CD52CE671D69568F00E6ED5D /* PlenarioClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlenarioClient.swift; sourceTree = "<group>"; };
+		CD865A8A1D70DDFA0049424E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CDA1F6581D694D3000EBF31B /* opengrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opengrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA1F65B1D694D3000EBF31B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA1F65D1D694D3000EBF31B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				CDA1F65D1D694D3000EBF31B /* MapViewController.swift */,
+				CD865A8A1D70DDFA0049424E /* SettingsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				CDA1F65C1D694D3000EBF31B /* AppDelegate.swift in Sources */,
 				CDCD4C0C1D6A6DF20018C21F /* PlenarioDataPoint.swift in Sources */,
 				CD52CE621D69560D00E6ED5D /* Constants.swift in Sources */,
+				CD865A8B1D70DDFA0049424E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
