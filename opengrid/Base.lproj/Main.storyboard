@@ -26,8 +26,8 @@
                                 <items>
                                     <barButtonItem title="Query" id="dJL-ZR-DNj">
                                         <connections>
-                                            <action selector="touchedMyButton:" destination="BYZ-38-t0r" id="AMt-fD-x3I"/>
-                                            <segue destination="gQi-M9-ipI" kind="modal" id="Cba-Ba-Qqh"/>
+                                            <action selector="queryButtonTapped:" destination="BYZ-38-t0r" id="GGP-ZS-HeH"/>
+                                            <segue destination="gQi-M9-ipI" kind="modal" identifier="Settings" id="Cba-Ba-Qqh"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

@@ -9,12 +9,22 @@
 import UIKit
 import DatePickerDialog
 
+@objc protocol SettingsViewControllerDelegate: class {
+    func giveStartAndEndDate(startDate:NSDate, endDate: NSDate)
+}
+
 class SettingsViewController: UIViewController {
+    
+    // Delegate
+    var delegate: SettingsViewControllerDelegate?
     
     // Properties
     var todaysDate: NSDate!
     var ninetyDaysAgo: NSDate!
     var tenYearsAgo: NSDate!
+    
+    var startDate: NSDate!
+    var endDate: NSDate!
     
     
     @IBOutlet weak var startDateLabel: UILabel!
@@ -26,10 +36,11 @@ class SettingsViewController: UIViewController {
         ninetyDaysAgo = NSDate(timeInterval: -7776000.0, sinceDate: todaysDate)
         tenYearsAgo = NSDate(timeInterval: -315360000.0, sinceDate: todaysDate)
         
+        startDate = ninetyDaysAgo
+        endDate = todaysDate
         
-        
-        startDateLabel.text = getStringFromDate(ninetyDaysAgo)
-        endDateLabel.text = getStringFromDate(todaysDate)
+        startDateLabel.text = getFormattedStringFromDate(ninetyDaysAgo)
+        endDateLabel.text = getFormattedStringFromDate(todaysDate)
         
     }
     
@@ -39,11 +50,10 @@ class SettingsViewController: UIViewController {
         
     }
     
-    private func getStringFromDate(date: NSDate) -> String {
+    private func getFormattedStringFromDate(date: NSDate) -> String {
         // set date formatter
         let formatter = NSDateFormatter()
         formatter.dateFormat = "MMMM d, yyyy"
-        
         return formatter.stringFromDate(date)
     }
     
@@ -59,7 +69,8 @@ class SettingsViewController: UIViewController {
         DatePickerDialog().show("Start Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: ninetyDaysAgo, minimumDate: tenYearsAgo, maximumDate: todaysDate, datePickerMode: .Date) { (date) in
             
             if let date = date {
-                self.startDateLabel.text = self.getStringFromDate(date)
+                self.startDateLabel.text = self.getFormattedStringFromDate(date)
+                self.startDate = date
             }
         }
     }
@@ -70,7 +81,8 @@ class SettingsViewController: UIViewController {
         DatePickerDialog().show("Start Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: todaysDate, minimumDate: tenYearsAgo, maximumDate: todaysDate, datePickerMode: .Date) { (date) in
             
             if let date = date {
-                self.endDateLabel.text = self.getStringFromDate(date)
+                self.endDateLabel.text = self.getFormattedStringFromDate(date)
+                self.endDate = date
             }
         }
     }
@@ -80,6 +92,11 @@ class SettingsViewController: UIViewController {
         // send query to plenario with new dates
         // return to mapViewController
         
+        // startDate and endDate objects
+        
+        self.dismissViewControllerAnimated(true) { 
+            self.delegate?.giveStartAndEndDate(self.startDate, endDate: self.endDate)
+        }
     }
     
     

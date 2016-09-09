@@ -112,6 +112,8 @@ extension PlenarioClient {
 
     }
     
+//    func getPlenarioDataPointsWithinTimeframe
+    
     private func getCornerCoordinates(centerCoordinate: CLLocationCoordinate2D, latitudeDelta: CLLocationDegrees, longitudeDelta: CLLocationDegrees) -> (sw: [Double], ne: [Double]) {
         // return tuple with sw,ne [latitude, longitude] coordinates
 //        let centerCoordinate = CLLocationCoordinate2DMake(self.mapView.region.center.latitude, self.mapView.region.center.longitude)

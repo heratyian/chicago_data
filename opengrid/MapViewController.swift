@@ -10,10 +10,12 @@ import UIKit
 import GeoJSON
 import MapKit
 
+let SettingsSegueID = "Settings"
+
 // TODO: move plenario functions to plenario convenience
 // send center coordinate, populate points
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, SettingsViewControllerDelegate {
 
     /* MARK: Properties */
     @IBOutlet weak var mapView: MKMapView!
@@ -33,6 +35,26 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         initLocationManager()
         
         self.setLocation(hardCodedCity)
+    }
+    
+    // MARK: SettingsViewControllerDelegate
+    func giveStartAndEndDate(startDate: NSDate, endDate: NSDate) {
+        // what to do with dates?
+        
+        // query DB with dates
+        
+        
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var settingsVC: SettingsViewController = SettingsViewController()
+        settingsVC = segue.destinationViewController as! SettingsViewController
+        settingsVC.delegate = self
+    }
+    
+    @IBAction func queryButtonTapped(sender: AnyObject) {
+        performSegueWithIdentifier(SettingsSegueID, sender: self)
     }
     
 
@@ -109,9 +131,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // input: PlenarioDataPoint Object
         // create annotation and add it to mapview
         
-        var coordinate = CLLocationCoordinate2DMake(dataPoint.latitude, dataPoint.longitude)
+        let coordinate = CLLocationCoordinate2DMake(dataPoint.latitude, dataPoint.longitude)
         
-        var annotation = MKPointAnnotation()
+        let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = dataPoint.primaryType
         annotation.subtitle = dataPoint.description
