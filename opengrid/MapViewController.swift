@@ -69,9 +69,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, SettingsVi
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        presentedVC.view.backgroundColor = YOUR_COLOR; // can be with 'alpha'
+//        presentingVC.modalPresentationStyle = UIModalPresentationCurrentContext;
+//        [presentingVC presentViewController:presentedVC animated:YES completion:NULL];
+        
         var settingsVC: SettingsViewController = SettingsViewController()
         settingsVC = segue.destinationViewController as! SettingsViewController
         settingsVC.delegate = self
+        
+        settingsVC.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
+        settingsVC.modalPresentationStyle = .OverCurrentContext
     }
     
     @IBAction func queryButtonTapped(sender: AnyObject) {
