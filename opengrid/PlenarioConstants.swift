@@ -19,6 +19,8 @@ extension PlenarioClient {
     struct ParameterKeys {
         static let DatasetName = "dataset_name"
         static let LocationGeomWithin = "location_geom__within"
+        static let StartDate = "obs_date__ge"
+        static let EndDate = "obs_date__le"
     }
     
     struct ParameterValues {

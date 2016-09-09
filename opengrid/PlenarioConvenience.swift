@@ -113,6 +113,36 @@ extension PlenarioClient {
     }
     
 //    func getPlenarioDataPointsWithinTimeframe
+    func getPlenarioDataPointsWithTimeframe(centerCoordinate: CLLocationCoordinate2D, latitudeDelta: CLLocationDegrees, longitudeDelta: CLLocationDegrees, startDate: NSDate, endDate: NSDate, completionHandlerForPlenarioDataPoints: (points:[PlenarioDataPoint]?, error: NSError?) -> Void) {
+        
+        // create dates
+        let stringStartDate = plenarioDateStringFromNSDate(startDate)
+        let stringEndDate = plenarioDateStringFromNSDate(endDate)
+        
+        let (sw,ne) = getCornerCoordinates(centerCoordinate, latitudeDelta: latitudeDelta, longitudeDelta: longitudeDelta)
+        let geoJSONString = geoJSONPolygonStringFromCoordinates(sw, topRight: ne)
+        
+        // parameters
+        let parameters: [String:String] = [PlenarioClient.ParameterKeys.LocationGeomWithin : geoJSONString,
+                                           PlenarioClient.ParameterKeys.StartDate : stringStartDate,
+                                           PlenarioClient.ParameterKeys.EndDate : stringEndDate]
+        
+        // create URL for crime data
+        let url = plenarioCrimeURLFromParameters(parameters)
+        
+        taskForGetMethod(url) { (result, error) in
+            if let error = error {
+                print(error)
+            } else {
+                if let result = result[ResponseKeys.Objects] as? [[String:AnyObject]] {
+                    let points = PlenarioDataPoint.pointsFromResults(result)
+                    completionHandlerForPlenarioDataPoints(points: points, error: nil)
+                } else {
+                    completionHandlerForPlenarioDataPoints(points: nil, error: NSError(domain: "getLocations", code: 0, userInfo: [NSLocalizedDescriptionKey: "could not parse getLocations"]))
+                }
+            }
+        }
+    }
     
     private func getCornerCoordinates(centerCoordinate: CLLocationCoordinate2D, latitudeDelta: CLLocationDegrees, longitudeDelta: CLLocationDegrees) -> (sw: [Double], ne: [Double]) {
         // return tuple with sw,ne [latitude, longitude] coordinates
@@ -148,6 +178,16 @@ extension PlenarioClient {
         let geoJSONDictionary = "{\"type\":\"Polygon\",\"coordinates\":\(coordinates)}"
         print(geoJSONDictionary)
         return geoJSONDictionary
+    }
+    
+    private func plenarioDateStringFromNSDate(date: NSDate) -> String {
+        // input: NSDate object
+        // output: YYYY-MM-DD
+        
+        // set date formatter
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyy-M-d"
+        return formatter.stringFromDate(date)
     }
     
     

@@ -39,10 +39,31 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, SettingsVi
     
     // MARK: SettingsViewControllerDelegate
     func giveStartAndEndDate(startDate: NSDate, endDate: NSDate) {
-        // what to do with dates?
+        // TODO: clear old annotations
+        mapView.removeAnnotations(mapView.annotations)
         
         // query DB with dates
+        let centerCoordinate = CLLocationCoordinate2DMake(self.mapView.region.center.latitude, self.mapView.region.center.longitude)
+        let latD = self.mapView.region.span.latitudeDelta
+        let longD = self.mapView.region.span.longitudeDelta
         
+        PlenarioClient.sharedInstance().getPlenarioDataPointsWithTimeframe(centerCoordinate, latitudeDelta: latD, longitudeDelta: longD, startDate: startDate, endDate: endDate, completionHandlerForPlenarioDataPoints: { (points, error) in
+            if let error = error {
+                print(error)
+            } else {
+                if let points = points {
+                    
+                    for point in points {
+                        print(point.caseNumber)
+                        self.createAnnotationWithDataPoint(point)
+                    }
+                    
+                } else {
+                    print("fail")
+                }
+            }
+        })
+
         
         
     }
