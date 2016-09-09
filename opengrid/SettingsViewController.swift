@@ -59,22 +59,26 @@ class SettingsViewController: UIViewController {
         DatePickerDialog().show("Start Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: ninetyDaysAgo, minimumDate: tenYearsAgo, maximumDate: todaysDate, datePickerMode: .Date) { (date) in
             
             if let date = date {
-                self.startDateLabel.text = "\(date.description)"
+                self.startDateLabel.text = self.getStringFromDate(date)
             }
-            
-            
         }
-        
-        
     }
     
     
     @IBAction func tappedEndDateEditButton(sender: AnyObject) {
        
+        DatePickerDialog().show("Start Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: todaysDate, minimumDate: tenYearsAgo, maximumDate: todaysDate, datePickerMode: .Date) { (date) in
+            
+            if let date = date {
+                self.endDateLabel.text = self.getStringFromDate(date)
+            }
+        }
     }
     
     
     @IBAction func tappedSearchButton(sender: AnyObject) {
+        // send query to plenario with new dates
+        // return to mapViewController
         
     }
     
