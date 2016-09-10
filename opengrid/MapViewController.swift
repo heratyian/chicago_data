@@ -22,6 +22,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, SettingsVi
     var locationManager: CLLocationManager!
     var placemark: MKPlacemark?
     var points: [PlenarioDataPoint] = [PlenarioDataPoint]()
+    var startDate: NSDate!
+    var endDate: NSDate!
+    
     
     /* MARK: Constants */
     let LongitudeDelta = 2200.0
@@ -29,18 +32,37 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, SettingsVi
     let hardCodedCity = "Chicago, IL"
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set dates
+//        createDates()
         
         initLocationManager()
         
         self.setLocation(hardCodedCity)
     }
     
+//    private func createDates() {
+//        // create dates
+//        let todaysDate = NSDate()
+//        let ninetyDaysAgo = NSDate(timeInterval: -7776000.0, sinceDate: todaysDate)
+//        
+//        startDate = ninetyDaysAgo
+//        endDate = todaysDate
+//    }
+    
+    
+    
     // MARK: SettingsViewControllerDelegate
-    func giveStartAndEndDate(startDate: NSDate, endDate: NSDate) {
+    func giveStartAndEndDate(start: NSDate, end: NSDate) {
         // TODO: clear old annotations
         mapView.removeAnnotations(mapView.annotations)
+        
+        self.startDate = start
+        self.endDate = end
         
         // query DB with dates
         let centerCoordinate = CLLocationCoordinate2DMake(self.mapView.region.center.latitude, self.mapView.region.center.longitude)
@@ -69,9 +91,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, SettingsVi
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        presentedVC.view.backgroundColor = YOUR_COLOR; // can be with 'alpha'
-//        presentingVC.modalPresentationStyle = UIModalPresentationCurrentContext;
-//        [presentingVC presentViewController:presentedVC animated:YES completion:NULL];
+        
+        // send dates
+        
         
         var settingsVC: SettingsViewController = SettingsViewController()
         settingsVC = segue.destinationViewController as! SettingsViewController

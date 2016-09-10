@@ -8,9 +8,10 @@
 
 import UIKit
 import DatePickerDialog
+import SwiftyButton
 
 @objc protocol SettingsViewControllerDelegate: class {
-    func giveStartAndEndDate(startDate:NSDate, endDate: NSDate)
+    func giveStartAndEndDate(start:NSDate, end: NSDate)
 }
 
 class SettingsViewController: UIViewController {
@@ -31,6 +32,16 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var endDateLabel: UILabel!
     
     override func viewWillAppear(animated: Bool) {
+        createDates()
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    private func createDates() {
         // create dates
         todaysDate = NSDate()
         ninetyDaysAgo = NSDate(timeInterval: -7776000.0, sinceDate: todaysDate)
@@ -41,13 +52,6 @@ class SettingsViewController: UIViewController {
         
         startDateLabel.text = getFormattedStringFromDate(ninetyDaysAgo)
         endDateLabel.text = getFormattedStringFromDate(todaysDate)
-        
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
     }
     
     private func getFormattedStringFromDate(date: NSDate) -> String {
@@ -66,11 +70,12 @@ class SettingsViewController: UIViewController {
 
     @IBAction func tappedStartDateEditButton(sender: AnyObject) {
         
-        DatePickerDialog().show("Start Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: ninetyDaysAgo, minimumDate: tenYearsAgo, maximumDate: todaysDate, datePickerMode: .Date) { (date) in
+        DatePickerDialog().show("Start Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: startDate, minimumDate: tenYearsAgo, maximumDate: endDate, datePickerMode: .Date) { (date) in
             
             if let date = date {
                 self.startDateLabel.text = self.getFormattedStringFromDate(date)
                 self.startDate = date
+                
             }
         }
     }
@@ -78,7 +83,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func tappedEndDateEditButton(sender: AnyObject) {
        
-        DatePickerDialog().show("Start Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: todaysDate, minimumDate: tenYearsAgo, maximumDate: todaysDate, datePickerMode: .Date) { (date) in
+        DatePickerDialog().show("End Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: endDate, minimumDate: startDate, maximumDate: todaysDate, datePickerMode: .Date) { (date) in
             
             if let date = date {
                 self.endDateLabel.text = self.getFormattedStringFromDate(date)
@@ -95,7 +100,7 @@ class SettingsViewController: UIViewController {
         // startDate and endDate objects
         
         self.dismissViewControllerAnimated(true) { 
-            self.delegate?.giveStartAndEndDate(self.startDate, endDate: self.endDate)
+            self.delegate?.giveStartAndEndDate(self.startDate, end: self.endDate)
         }
     }
     

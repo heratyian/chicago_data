@@ -24,7 +24,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gl-i2-sbC">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem title="Query" id="dJL-ZR-DNj">
+                                    <barButtonItem style="done" systemItem="search" id="dJL-ZR-DNj">
                                         <connections>
                                             <action selector="queryButtonTapped:" destination="BYZ-38-t0r" id="GGP-ZS-HeH"/>
                                             <segue destination="gQi-M9-ipI" kind="modal" identifier="Settings" id="Cba-Ba-Qqh"/>
@@ -64,69 +64,126 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0q-H3-yd3">
-                                <rect key="frame" x="107" y="428" width="106" height="69"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Search"/>
-                                <connections>
-                                    <action selector="tappedSearchButton:" destination="gQi-M9-ipI" eventType="touchUpInside" id="p0o-f5-aLi"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDc-lw-yx4">
-                                <rect key="frame" x="117" y="89" width="87" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date: Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gz-QI-e7U">
-                                <rect key="frame" x="98" y="151" width="125" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHk-wX-Xvc">
-                                <rect key="frame" x="28" y="85" width="30" height="30"/>
-                                <state key="normal" title="Edit"/>
-                                <connections>
-                                    <action selector="tappedStartDateEditButton:" destination="gQi-M9-ipI" eventType="touchUpInside" id="zE1-UZ-Bzv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yht-FQ-3Sd">
-                                <rect key="frame" x="28" y="146" width="30" height="30"/>
-                                <state key="normal" title="Edit"/>
-                                <connections>
-                                    <action selector="tappedEndDateEditButton:" destination="gQi-M9-ipI" eventType="touchUpInside" id="B3P-e6-Xsw"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7Y-lw-m0N">
-                                <rect key="frame" x="0.0" y="28" width="39" height="30"/>
+                                <rect key="frame" x="20" y="20" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="tappedCloseButton:" destination="gQi-M9-ipI" eventType="touchUpInside" id="7Wd-S7-wwL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0q-H3-yd3" customClass="SwiftyButton" customModule="SwiftyButton">
+                                <rect key="frame" x="0.0" y="470" width="322" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="Fu3-Wf-9MP"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedSearchButton:" destination="gQi-M9-ipI" eventType="touchUpInside" id="p0o-f5-aLi"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="etE-q8-DBJ">
+                                <rect key="frame" x="0.0" y="342" width="322" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24X-gz-Vt3">
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2t-GC-1fp">
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="60"/>
+                                                <connections>
+                                                    <action selector="tappedStartDateEditButton:" destination="gQi-M9-ipI" eventType="touchUpInside" id="mX9-IA-O9e"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDK-6H-YcE">
+                                                <rect key="frame" x="10" y="19" width="40" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="G0q-y6-RJD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="July 11, 1989" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whg-Cr-Fwi">
+                                                <rect key="frame" x="114" y="19" width="200" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="L2t-GC-1fp" firstAttribute="leading" secondItem="24X-gz-Vt3" secondAttribute="leading" id="0R3-0F-b5A"/>
+                                            <constraint firstItem="HDK-6H-YcE" firstAttribute="centerY" secondItem="L2t-GC-1fp" secondAttribute="centerY" id="15s-w9-6U5"/>
+                                            <constraint firstAttribute="trailing" secondItem="L2t-GC-1fp" secondAttribute="trailing" id="BqU-C4-BAb"/>
+                                            <constraint firstItem="HDK-6H-YcE" firstAttribute="leading" secondItem="24X-gz-Vt3" secondAttribute="leading" constant="10" id="GGF-8H-Jol"/>
+                                            <constraint firstItem="whg-Cr-Fwi" firstAttribute="leading" secondItem="HDK-6H-YcE" secondAttribute="trailing" constant="64" id="T7z-1v-Khm"/>
+                                            <constraint firstItem="HDK-6H-YcE" firstAttribute="baseline" secondItem="whg-Cr-Fwi" secondAttribute="baseline" id="ZNw-kt-h29"/>
+                                            <constraint firstItem="whg-Cr-Fwi" firstAttribute="trailing" secondItem="24X-gz-Vt3" secondAttribute="trailingMargin" id="fM7-FO-x3D"/>
+                                            <constraint firstAttribute="bottom" secondItem="L2t-GC-1fp" secondAttribute="bottom" id="hHO-tl-9uX"/>
+                                            <constraint firstItem="L2t-GC-1fp" firstAttribute="top" secondItem="24X-gz-Vt3" secondAttribute="top" id="ucy-Qy-fH5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ric-jc-vOm">
+                                        <rect key="frame" x="0.0" y="60" width="322" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpU-hz-VW0">
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="60"/>
+                                                <connections>
+                                                    <action selector="tappedEndDateEditButton:" destination="gQi-M9-ipI" eventType="touchUpInside" id="CG1-6j-oVk"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOn-dB-a5Q">
+                                                <rect key="frame" x="10" y="19" width="21" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="21" id="HhZ-ul-NkR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="December 31, 2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGU-xi-ON7">
+                                                <rect key="frame" x="114" y="19" width="200" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="wpU-hz-VW0" firstAttribute="leading" secondItem="Ric-jc-vOm" secondAttribute="leading" id="5UR-rR-yrW"/>
+                                            <constraint firstItem="DGU-xi-ON7" firstAttribute="leading" secondItem="LOn-dB-a5Q" secondAttribute="trailing" constant="83" id="6yQ-BW-b7T"/>
+                                            <constraint firstAttribute="trailing" secondItem="wpU-hz-VW0" secondAttribute="trailing" id="Fkz-A5-63V"/>
+                                            <constraint firstItem="LOn-dB-a5Q" firstAttribute="leading" secondItem="Ric-jc-vOm" secondAttribute="leading" constant="10" id="JQ5-v5-eFE"/>
+                                            <constraint firstItem="LOn-dB-a5Q" firstAttribute="baseline" secondItem="DGU-xi-ON7" secondAttribute="baseline" id="VYK-Zj-EVf"/>
+                                            <constraint firstItem="DGU-xi-ON7" firstAttribute="trailing" secondItem="Ric-jc-vOm" secondAttribute="trailingMargin" id="WCg-v3-n6h"/>
+                                            <constraint firstItem="wpU-hz-VW0" firstAttribute="centerY" secondItem="LOn-dB-a5Q" secondAttribute="centerY" id="gB8-Oi-cba"/>
+                                            <constraint firstAttribute="bottom" secondItem="wpU-hz-VW0" secondAttribute="bottom" id="ie1-8R-Tnm"/>
+                                            <constraint firstItem="wpU-hz-VW0" firstAttribute="top" secondItem="Ric-jc-vOm" secondAttribute="top" id="mfp-hc-dX6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="H0q-H3-yd3" firstAttribute="centerX" secondItem="plf-3S-mCb" secondAttribute="centerX" id="25N-rb-HbM"/>
-                            <constraint firstItem="6gz-QI-e7U" firstAttribute="top" secondItem="RDc-lw-yx4" secondAttribute="bottom" constant="41" id="2Vo-Pt-znI"/>
-                            <constraint firstItem="QhU-La-efG" firstAttribute="top" secondItem="H0q-H3-yd3" secondAttribute="bottom" constant="71" id="853-Od-nAE"/>
-                            <constraint firstItem="RDc-lw-yx4" firstAttribute="centerX" secondItem="6gz-QI-e7U" secondAttribute="centerX" id="DJg-mY-Apw"/>
-                            <constraint firstItem="wHk-wX-Xvc" firstAttribute="leading" secondItem="yht-FQ-3Sd" secondAttribute="leading" id="GHF-cN-uAq"/>
-                            <constraint firstItem="yht-FQ-3Sd" firstAttribute="centerY" secondItem="6gz-QI-e7U" secondAttribute="centerY" id="OUX-hu-M6F"/>
-                            <constraint firstItem="H0q-H3-yd3" firstAttribute="top" secondItem="6M4-bk-9kP" secondAttribute="bottom" constant="408" id="bOH-hm-HgE"/>
-                            <constraint firstItem="wHk-wX-Xvc" firstAttribute="baseline" secondItem="RDc-lw-yx4" secondAttribute="baseline" id="ci6-qk-mQJ"/>
-                            <constraint firstItem="6gz-QI-e7U" firstAttribute="leading" secondItem="yht-FQ-3Sd" secondAttribute="trailing" constant="40" id="fvf-Cs-y5R"/>
-                            <constraint firstItem="RDc-lw-yx4" firstAttribute="top" secondItem="6M4-bk-9kP" secondAttribute="bottom" constant="69" id="hhE-Lg-Jyu"/>
-                            <constraint firstItem="c7Y-lw-m0N" firstAttribute="leading" secondItem="plf-3S-mCb" secondAttribute="leading" id="udt-hi-xPH"/>
-                            <constraint firstItem="c7Y-lw-m0N" firstAttribute="top" secondItem="plf-3S-mCb" secondAttribute="top" constant="28" id="vsG-YT-ARz"/>
-                            <constraint firstItem="H0q-H3-yd3" firstAttribute="leading" secondItem="plf-3S-mCb" secondAttribute="leadingMargin" constant="91" id="xPa-lm-ORs"/>
-                            <constraint firstItem="6gz-QI-e7U" firstAttribute="centerX" secondItem="H0q-H3-yd3" secondAttribute="centerX" id="y66-xN-M7C"/>
+                            <constraint firstItem="etE-q8-DBJ" firstAttribute="top" secondItem="plf-3S-mCb" secondAttribute="top" constant="342" id="2po-MK-vR6"/>
+                            <constraint firstAttribute="bottom" secondItem="H0q-H3-yd3" secondAttribute="bottom" constant="20" symbolic="YES" id="6TX-ak-I9B"/>
+                            <constraint firstItem="etE-q8-DBJ" firstAttribute="leading" secondItem="plf-3S-mCb" secondAttribute="leading" id="BQG-s5-hWG"/>
+                            <constraint firstItem="H0q-H3-yd3" firstAttribute="top" secondItem="etE-q8-DBJ" secondAttribute="bottom" constant="8" symbolic="YES" id="GpW-my-ix5"/>
+                            <constraint firstItem="etE-q8-DBJ" firstAttribute="leading" secondItem="H0q-H3-yd3" secondAttribute="leading" id="GuR-yR-gWx"/>
+                            <constraint firstItem="etE-q8-DBJ" firstAttribute="trailing" secondItem="H0q-H3-yd3" secondAttribute="trailing" id="OOf-jM-Tni"/>
+                            <constraint firstItem="c7Y-lw-m0N" firstAttribute="leading" secondItem="plf-3S-mCb" secondAttribute="leadingMargin" constant="4" id="tpi-EP-QVi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="etE-q8-DBJ" secondAttribute="trailing" constant="-18" id="uBQ-8j-MgF"/>
+                            <constraint firstItem="c7Y-lw-m0N" firstAttribute="top" secondItem="6M4-bk-9kP" secondAttribute="bottom" id="wRn-NK-JFM"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="endDateLabel" destination="6gz-QI-e7U" id="tTk-eX-w9T"/>
-                        <outlet property="startDateLabel" destination="RDc-lw-yx4" id="emA-1G-uXw"/>
+                        <outlet property="endDateLabel" destination="DGU-xi-ON7" id="cB8-to-ltb"/>
+                        <outlet property="startDateLabel" destination="whg-Cr-Fwi" id="W9Z-wB-wDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EiI-25-BvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
