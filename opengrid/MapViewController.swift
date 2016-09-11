@@ -165,7 +165,7 @@ class MapViewController: UIViewController {
             region.span.longitudeDelta /= self.LongitudeDelta
             region.span.latitudeDelta /= self.LatitudeDelta
             self.mapView.setRegion(region, animated: true)
-            self.mapView.addAnnotation(self.placemark!)
+//            self.mapView.addAnnotation(self.placemark!)
         }
         
         

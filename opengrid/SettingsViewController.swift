@@ -28,13 +28,9 @@ class SettingsViewController: UIViewController {
     
     
     
-    @IBOutlet weak var typeStackView: UIStackView!
-    @IBOutlet weak var timeframeStackView: UIStackView!
-    
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     
-    @IBOutlet weak var typeCrimeLabel: UILabel!
     
     override func viewWillAppear(animated: Bool) {
         setDates()
@@ -43,9 +39,6 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        typeStackView.hidden = true
-        timeframeStackView.hidden = false
         
     }
     
@@ -64,31 +57,6 @@ class SettingsViewController: UIViewController {
         return formatter.stringFromDate(date)
     }
     
-    
-    
-    @IBAction func tappedCrimeButton(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func tappedTypeButton(sender: AnyObject) {
-        // move timeframeStackView to the left of screen
-        // move typeStackView on screen
-        
-
-        
-//        var frame = timeframeStackView.frame
-//        frame.origin.x = self.view.frame.size.width
-//        timeframeStackView.frame = frame
-        timeframeStackView.hidden = true
-        typeStackView.hidden = false
-        
-        
-    }
-    
-    @IBAction func tappedTimeframeButton(sender: AnyObject) {
-        timeframeStackView.hidden = false
-        typeStackView.hidden = true
-    }
     
     // dismiss view controller
     @IBAction func tappedCloseButton(sender: AnyObject) {
