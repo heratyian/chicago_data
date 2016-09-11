@@ -15,6 +15,9 @@ struct PlenarioDataPoint {
     var caseNumber: String!
     var primaryType: String!
     var description: String!
+    var date: String!
+    var communityArea: String!
+    var ward: Int!
     
 //    static let ID = "id"
 //    static let Date = "date"
@@ -43,6 +46,10 @@ struct PlenarioDataPoint {
         caseNumber = dictionary[PlenarioClient.ResponseKeys.CaseNumber] as! String
         primaryType = dictionary[PlenarioClient.ResponseKeys.PrimaryType] as! String
         description = dictionary[PlenarioClient.ResponseKeys.Description] as! String
+        
+        date = dictionary[PlenarioClient.ResponseKeys.Date] as! String
+        communityArea = dictionary[PlenarioClient.ResponseKeys.CommunityArea] as! String
+        ward = dictionary[PlenarioClient.ResponseKeys.Ward] as! Int
         
         
     }
