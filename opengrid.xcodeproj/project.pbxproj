@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		970CA1D6A8236653837016C7 /* Pods_opengrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41531FF68DB420DC64C97DF /* Pods_opengrid.framework */; };
+		CD2E89A21D85DA77009DDDBE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E89A11D85DA77009DDDBE /* DetailViewController.swift */; };
 		CD52CE621D69560D00E6ED5D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52CE611D69560D00E6ED5D /* Constants.swift */; };
 		CD52CE641D69566700E6ED5D /* PlenarioConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52CE631D69566700E6ED5D /* PlenarioConstants.swift */; };
 		CD52CE661D69567F00E6ED5D /* PlenarioConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52CE651D69567F00E6ED5D /* PlenarioConvenience.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		C70982AF0FB2E65A49AB22DC /* Pods-opengrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opengrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opengrid/Pods-opengrid.debug.xcconfig"; sourceTree = "<group>"; };
+		CD2E89A11D85DA77009DDDBE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD52CE611D69560D00E6ED5D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CD52CE631D69566700E6ED5D /* PlenarioConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlenarioConstants.swift; sourceTree = "<group>"; };
 		CD52CE651D69567F00E6ED5D /* PlenarioConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlenarioConvenience.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				CDA1F65D1D694D3000EBF31B /* MapViewController.swift */,
 				CD865A8A1D70DDFA0049424E /* SettingsViewController.swift */,
+				CD2E89A11D85DA77009DDDBE /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2E89A21D85DA77009DDDBE /* DetailViewController.swift in Sources */,
 				CDA1F65E1D694D3000EBF31B /* MapViewController.swift in Sources */,
 				CD52CE641D69566700E6ED5D /* PlenarioConstants.swift in Sources */,
 				CD52CE681D69568F00E6ED5D /* PlenarioClient.swift in Sources */,

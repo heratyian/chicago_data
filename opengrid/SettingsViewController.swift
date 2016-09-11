@@ -21,37 +21,40 @@ class SettingsViewController: UIViewController {
     
     // Properties
     var todaysDate: NSDate!
-    var ninetyDaysAgo: NSDate!
     var tenYearsAgo: NSDate!
     
     var startDate: NSDate!
     var endDate: NSDate!
     
     
+    
+    @IBOutlet weak var typeStackView: UIStackView!
+    @IBOutlet weak var timeframeStackView: UIStackView!
+    
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     
+    @IBOutlet weak var typeCrimeLabel: UILabel!
+    
     override func viewWillAppear(animated: Bool) {
-        createDates()
+        setDates()
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        typeStackView.hidden = true
+        timeframeStackView.hidden = false
+        
     }
     
-    private func createDates() {
+    private func setDates() {
         // create dates
         todaysDate = NSDate()
-        ninetyDaysAgo = NSDate(timeInterval: -7776000.0, sinceDate: todaysDate)
         tenYearsAgo = NSDate(timeInterval: -315360000.0, sinceDate: todaysDate)
-        
-        startDate = ninetyDaysAgo
-        endDate = todaysDate
-        
-        startDateLabel.text = getFormattedStringFromDate(ninetyDaysAgo)
-        endDateLabel.text = getFormattedStringFromDate(todaysDate)
+        startDateLabel.text = getFormattedStringFromDate(startDate)
+        endDateLabel.text = getFormattedStringFromDate(endDate)
     }
     
     private func getFormattedStringFromDate(date: NSDate) -> String {
@@ -61,6 +64,31 @@ class SettingsViewController: UIViewController {
         return formatter.stringFromDate(date)
     }
     
+    
+    
+    @IBAction func tappedCrimeButton(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func tappedTypeButton(sender: AnyObject) {
+        // move timeframeStackView to the left of screen
+        // move typeStackView on screen
+        
+
+        
+//        var frame = timeframeStackView.frame
+//        frame.origin.x = self.view.frame.size.width
+//        timeframeStackView.frame = frame
+        timeframeStackView.hidden = true
+        typeStackView.hidden = false
+        
+        
+    }
+    
+    @IBAction func tappedTimeframeButton(sender: AnyObject) {
+        timeframeStackView.hidden = false
+        typeStackView.hidden = true
+    }
     
     // dismiss view controller
     @IBAction func tappedCloseButton(sender: AnyObject) {
