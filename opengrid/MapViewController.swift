@@ -75,7 +75,7 @@ class MapViewController: UIViewController {
             settingsVC.startDate = self.startDate
             settingsVC.endDate = self.endDate
             
-            settingsVC.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
+            settingsVC.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
             settingsVC.modalPresentationStyle = .OverCurrentContext
             
         } else if segue.identifier == DetailSegueID {
@@ -92,7 +92,7 @@ class MapViewController: UIViewController {
             detailViewController.dateString = self.dataPoint!.date
             
             
-            detailViewController.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
+            detailViewController.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
             detailViewController.modalPresentationStyle = .OverCurrentContext
         }
     }

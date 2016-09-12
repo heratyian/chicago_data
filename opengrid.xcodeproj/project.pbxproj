@@ -49,7 +49,7 @@
 		CD52CE651D69567F00E6ED5D /* PlenarioConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlenarioConvenience.swift; sourceTree = "<group>"; };
 		CD52CE671D69568F00E6ED5D /* PlenarioClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlenarioClient.swift; sourceTree = "<group>"; };
 		CD865A8A1D70DDFA0049424E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		CDA1F6581D694D3000EBF31B /* opengrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opengrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA1F6581D694D3000EBF31B /* Chicago Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicago Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA1F65B1D694D3000EBF31B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA1F65D1D694D3000EBF31B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CDA1F6601D694D3000EBF31B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		CDA1F6591D694D3000EBF31B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDA1F6581D694D3000EBF31B /* opengrid.app */,
+				CDA1F6581D694D3000EBF31B /* Chicago Data.app */,
 				CDA1F66C1D694D3000EBF31B /* opengridTests.xctest */,
 				CDA1F6771D694D3000EBF31B /* opengridUITests.xctest */,
 			);
@@ -238,7 +238,7 @@
 			);
 			name = opengrid;
 			productName = opengrid;
-			productReference = CDA1F6581D694D3000EBF31B /* opengrid.app */;
+			productReference = CDA1F6581D694D3000EBF31B /* Chicago Data.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CDA1F66B1D694D3000EBF31B /* opengridTests */ = {
@@ -551,10 +551,13 @@
 			baseConfigurationReference = C70982AF0FB2E65A49AB22DC /* Pods-opengrid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ian Heraty (4X299XG6Z3)";
 				INFOPLIST_FILE = opengrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.opengrid;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.chicagodata;
+				PRODUCT_NAME = "Chicago Data";
+				PROVISIONING_PROFILE = "33dbce6c-b5f6-4283-8d45-eccf079f57a3";
 			};
 			name = Debug;
 		};
@@ -563,10 +566,13 @@
 			baseConfigurationReference = CED2D2D97ADDA12A159B5468 /* Pods-opengrid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ian Heraty (4X299XG6Z3)";
 				INFOPLIST_FILE = opengrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.opengrid;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.chicagodata;
+				PRODUCT_NAME = "Chicago Data";
+				PROVISIONING_PROFILE = "33dbce6c-b5f6-4283-8d45-eccf079f57a3";
 			};
 			name = Release;
 		};
