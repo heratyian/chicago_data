@@ -54,9 +54,9 @@ class MapViewController: UIViewController {
     private func createDates() {
         // create dates
         let todaysDate = NSDate()
-        let ninetyDaysAgo = NSDate(timeInterval: -7776000.0, sinceDate: todaysDate)
+        let thirtyDaysAgo = NSDate(timeInterval: -2592000.0, sinceDate: todaysDate)
         
-        startDate = ninetyDaysAgo
+        startDate = thirtyDaysAgo
         endDate = todaysDate
     }
     

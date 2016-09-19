@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		970CA1D6A8236653837016C7 /* Pods_opengrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41531FF68DB420DC64C97DF /* Pods_opengrid.framework */; };
 		CD2E89A21D85DA77009DDDBE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E89A11D85DA77009DDDBE /* DetailViewController.swift */; };
+		CD3EE6961D8F3ED50055283D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD865A8A1D70DDFA0049424E /* SettingsViewController.swift */; };
 		CD52CE621D69560D00E6ED5D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52CE611D69560D00E6ED5D /* Constants.swift */; };
 		CD52CE641D69566700E6ED5D /* PlenarioConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52CE631D69566700E6ED5D /* PlenarioConstants.swift */; };
 		CD52CE661D69567F00E6ED5D /* PlenarioConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52CE651D69567F00E6ED5D /* PlenarioConvenience.swift */; };
@@ -417,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA1F6711D694D3000EBF31B /* opengridTests.swift in Sources */,
+				CD3EE6961D8F3ED50055283D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,12 +554,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ian Heraty (4X299XG6Z3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = opengrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.chicagodata;
 				PRODUCT_NAME = "Chicago Data";
-				PROVISIONING_PROFILE = "33dbce6c-b5f6-4283-8d45-eccf079f57a3";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -567,12 +569,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ian Heraty (4X299XG6Z3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = opengrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.chicagodata;
 				PRODUCT_NAME = "Chicago Data";
-				PROVISIONING_PROFILE = "33dbce6c-b5f6-4283-8d45-eccf079f57a3";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
