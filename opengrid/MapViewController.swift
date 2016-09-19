@@ -18,37 +18,34 @@ let DetailSegueID = "Detail"
 
 class MapViewController: UIViewController {
 
-    /* MARK: Properties */
+    // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
+    
+    // MARK: Properties
     var locationManager: CLLocationManager!
     var placemark: MKPlacemark?
-    var points: [PlenarioDataPoint] = [PlenarioDataPoint]()
-    var dataPoint: PlenarioDataPoint?
+    var dataPoint: PlenarioDataPoint?   // sent to detailViewController
     var startDate: NSDate!
     var endDate: NSDate!
     
-    
-    /* MARK: Constants */
+    // MARK: Constants
     let LongitudeDelta = 2200.0
     let LatitudeDelta = 2200.0
     let hardCodedCity = "Chicago, IL"
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        // set dates
         createDates()
-        
         initLocationManager()
-        
         self.setLocation(hardCodedCity)
-        
         mapView.delegate = self
+    }
+    
+    
+    @IBAction func queryButtonTapped(sender: AnyObject) {
+        performSegueWithIdentifier(SettingsSegueID, sender: self)
     }
     
     private func createDates() {
@@ -59,10 +56,6 @@ class MapViewController: UIViewController {
         startDate = thirtyDaysAgo
         endDate = todaysDate
     }
-    
-    
-    
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -89,110 +82,8 @@ class MapViewController: UIViewController {
             detailViewController.modalPresentationStyle = .OverCurrentContext
         }
     }
-    
-    @IBAction func queryButtonTapped(sender: AnyObject) {
-        performSegueWithIdentifier(SettingsSegueID, sender: self)
-    }
-    
 
-    
-    private func queryDatabase() {
-        // query plenario api
-        
-        let centerCoordinate = CLLocationCoordinate2DMake(self.mapView.region.center.latitude, self.mapView.region.center.longitude)
-        let latD = self.mapView.region.span.latitudeDelta
-        let longD = self.mapView.region.span.longitudeDelta
-        
-        PlenarioClient.sharedInstance().getPlenarioDataPoints(centerCoordinate, latitudeDelta: latD, longitudeDelta: longD, completionHandlerForPlenarioDataPoints: { (points, error) in
-            if let error = error {
-                print(error)
-            } else {
-                if let points = points {
-                    //                    self.points = points
-                    for point in points {
-                        print(point.caseNumber)
-                        self.createAnnotationWithDataPoint(point)
-                    }
-                    
-                } else {
-                    print("fail")
-                }
-            }
-        })
-    }
-    
-    private func initLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.distanceFilter = kCLDistanceFilterNone
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
-    }
-    
-    // todo: if user location, set to user current location, else chicago downtown
-    private func setLocation(city: String) {
-        let geocoder = CLGeocoder()
-        
-        geocoder.geocodeAddressString(city) { (placemarks, error) in
-            
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            guard let placemarks = placemarks else {
-                print("could not find placemarks")
-                return
-            }
-            
-            guard placemarks.count > 0 else {
-                print("no results")
-                return
-            }
-            
-            let topResult: CLPlacemark = placemarks[0]
-            self.placemark = MKPlacemark(placemark: topResult)
-            
-            var region: MKCoordinateRegion = self.mapView.region
-            region.center = (self.placemark!.location?.coordinate)!
-            region.span.longitudeDelta /= self.LongitudeDelta
-            region.span.latitudeDelta /= self.LatitudeDelta
-            self.mapView.setRegion(region, animated: true)
-//            self.mapView.addAnnotation(self.placemark!)
-        }
-        
-        
-    }
-    
-    private func createAnnotationWithDataPoint(dataPoint: PlenarioDataPoint) {
-        // input: PlenarioDataPoint Object
-        // create annotation and add it to mapview
-        
-        let coordinate = CLLocationCoordinate2DMake(dataPoint.latitude, dataPoint.longitude)
-        
-        let annotation = MyAnnotation()
-        annotation.coordinate = coordinate
-        annotation.title = dataPoint.primaryType
-        annotation.subtitle = dataPoint.description
-        annotation.dataPoint = dataPoint
-        
-        self.mapView.addAnnotation(annotation)
-
-    }
-    
-    
-    
-    
-    
-}
-
-// MARK: SettingsViewControllerDelegate
-extension MapViewController: SettingsViewControllerDelegate {
-
-    func giveStartAndEndDate(start: NSDate, end: NSDate) {
-        // TODO: call query DB function, alter to make dates optional
-        
-        
+    private func queryDatabase(start: NSDate, end: NSDate) {
         
         mapView.removeAnnotations(mapView.annotations)
         
@@ -221,6 +112,31 @@ extension MapViewController: SettingsViewControllerDelegate {
             }
         })
     }
+    
+    private func createAnnotationWithDataPoint(dataPoint: PlenarioDataPoint) {
+        // input: PlenarioDataPoint Object
+        // create annotation and add it to mapview
+        
+        let coordinate = CLLocationCoordinate2DMake(dataPoint.latitude, dataPoint.longitude)
+        
+        let annotation = MyAnnotation()
+        annotation.coordinate = coordinate
+        annotation.title = dataPoint.primaryType
+        annotation.subtitle = dataPoint.description
+        annotation.dataPoint = dataPoint
+        
+        self.mapView.addAnnotation(annotation)
+
+    }
+    
+}
+
+// MARK: SettingsViewControllerDelegate
+extension MapViewController: SettingsViewControllerDelegate {
+
+    func giveStartAndEndDate(start: NSDate, end: NSDate) {
+        queryDatabase(start, end: end)
+    }
 }
 
 // MARK: MKMapViewDelegate
@@ -233,18 +149,13 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         print("tapped accesory buttons")
         
-        
         // fetch datapoint
         let annotation = view.annotation as! MyAnnotation
-        print(annotation.dataPoint!.caseNumber)
+//        print(annotation.dataPoint!.caseNumber)
         self.dataPoint = annotation.dataPoint!
-
-        
         
         // segue to detailViewController
         performSegueWithIdentifier(DetailSegueID, sender: self)
-        
-        
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -263,6 +174,45 @@ extension MapViewController: MKMapViewDelegate {
 // MARK: CLLocationManager
 extension MapViewController: CLLocationManagerDelegate {
     
+    private func initLocationManager() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    
+    // TODO: if user location, set to user current location, else chicago downtown
+    private func setLocation(city: String) {
+        let geocoder = CLGeocoder()
+        
+        geocoder.geocodeAddressString(city) { (placemarks, error) in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let placemarks = placemarks else {
+                print("could not find placemarks")
+                return
+            }
+            
+            guard placemarks.count > 0 else {
+                print("no results")
+                return
+            }
+            
+            let topResult: CLPlacemark = placemarks[0]
+            self.placemark = MKPlacemark(placemark: topResult)
+            
+            var region: MKCoordinateRegion = self.mapView.region
+            region.center = (self.placemark!.location?.coordinate)!
+            region.span.longitudeDelta /= self.LongitudeDelta
+            region.span.latitudeDelta /= self.LatitudeDelta
+            self.mapView.setRegion(region, animated: true)
+        }
+    }
 }
 
 class MyAnnotation: MKPointAnnotation {

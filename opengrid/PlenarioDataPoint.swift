@@ -11,18 +11,18 @@ import Foundation
 typealias DataTuple = (title: String, value: String)
 
 struct PlenarioDataPoint {
+    
     // MARK: Properties
     var latitude: Double!
     var longitude: Double!
-    var caseNumber: String!
     var primaryType: String!
     var description: String!
-    var date: String!
-    var communityArea: String!
-    var ward: Int!
+    var caseNumber: String!
     
-    // create an array of tuples
-    // ("title_string", "data_string")
+//    var date: String!
+//    var communityArea: String!
+//    var ward: Int!
+    
     var dataArray: [DataTuple] = []
     
 //    static let ID = "id"
@@ -49,22 +49,25 @@ struct PlenarioDataPoint {
         
         latitude = dictionary[PlenarioClient.ResponseKeys.Latitude] as! Double
         longitude = dictionary[PlenarioClient.ResponseKeys.Longitude] as! Double
-        caseNumber = dictionary[PlenarioClient.ResponseKeys.CaseNumber] as! String
         primaryType = dictionary[PlenarioClient.ResponseKeys.PrimaryType] as! String
         description = dictionary[PlenarioClient.ResponseKeys.Description] as! String
-        date = dictionary[PlenarioClient.ResponseKeys.Date] as! String
-        communityArea = dictionary[PlenarioClient.ResponseKeys.CommunityArea] as! String
-        ward = dictionary[PlenarioClient.ResponseKeys.Ward] as! Int
+        caseNumber = dictionary[PlenarioClient.ResponseKeys.CaseNumber] as! String
         
         
         
+        let date = dictionary[PlenarioClient.ResponseKeys.Date] as! String
+        let communityArea = dictionary[PlenarioClient.ResponseKeys.CommunityArea] as! String
+        let ward = dictionary[PlenarioClient.ResponseKeys.Ward] as! Int
+        
+        
+        
+        // for detail view
         dataArray.append((PlenarioClient.ResponseKeys.CaseNumber, caseNumber))
         dataArray.append((PlenarioClient.ResponseKeys.PrimaryType, primaryType))
         dataArray.append((PlenarioClient.ResponseKeys.Description, description))
         dataArray.append((PlenarioClient.ResponseKeys.Date, date))
         dataArray.append((PlenarioClient.ResponseKeys.CommunityArea, communityArea))
         dataArray.append((PlenarioClient.ResponseKeys.Ward, String(ward)))
-        
         
     }
     
@@ -73,10 +76,7 @@ struct PlenarioDataPoint {
         var points = [PlenarioDataPoint]()
  
         for result in results {
-//            print(result)
-//            print(result["case_number"]!)
             let dataPoint = PlenarioDataPoint(dictionary: result)
-//            print(dataPoint)
             points.append(dataPoint)
         }
         
