@@ -83,14 +83,7 @@ class MapViewController: UIViewController {
             var detailViewController: DetailViewController = DetailViewController()
             detailViewController = segue.destinationViewController as! DetailViewController
             
-            
-            detailViewController.caseNumberString = self.dataPoint!.caseNumber
-            detailViewController.descriptionString = self.dataPoint!.description
-            detailViewController.typeString = self.dataPoint!.primaryType
-            detailViewController.communityString = self.dataPoint!.primaryType
-            detailViewController.wardInt = self.dataPoint!.ward
-            detailViewController.dateString = self.dataPoint!.date
-            
+            detailViewController.dataPoint = self.dataPoint!
             
             detailViewController.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
             detailViewController.modalPresentationStyle = .OverCurrentContext

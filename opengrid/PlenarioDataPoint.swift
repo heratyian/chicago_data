@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias DataTuple = (title: String, value: String)
+
 struct PlenarioDataPoint {
     // MARK: Properties
     var latitude: Double!
@@ -18,6 +20,10 @@ struct PlenarioDataPoint {
     var date: String!
     var communityArea: String!
     var ward: Int!
+    
+    // create an array of tuples
+    // ("title_string", "data_string")
+    var dataArray: [DataTuple] = []
     
 //    static let ID = "id"
 //    static let Date = "date"
@@ -46,10 +52,18 @@ struct PlenarioDataPoint {
         caseNumber = dictionary[PlenarioClient.ResponseKeys.CaseNumber] as! String
         primaryType = dictionary[PlenarioClient.ResponseKeys.PrimaryType] as! String
         description = dictionary[PlenarioClient.ResponseKeys.Description] as! String
-        
         date = dictionary[PlenarioClient.ResponseKeys.Date] as! String
         communityArea = dictionary[PlenarioClient.ResponseKeys.CommunityArea] as! String
         ward = dictionary[PlenarioClient.ResponseKeys.Ward] as! Int
+        
+        
+        
+        dataArray.append((PlenarioClient.ResponseKeys.CaseNumber, caseNumber))
+        dataArray.append((PlenarioClient.ResponseKeys.PrimaryType, primaryType))
+        dataArray.append((PlenarioClient.ResponseKeys.Description, description))
+        dataArray.append((PlenarioClient.ResponseKeys.Date, date))
+        dataArray.append((PlenarioClient.ResponseKeys.CommunityArea, communityArea))
+        dataArray.append((PlenarioClient.ResponseKeys.Ward, String(ward)))
         
         
     }
