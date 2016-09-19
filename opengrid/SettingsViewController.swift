@@ -41,28 +41,20 @@ class SettingsViewController: UIViewController  {
     override func viewWillAppear(animated: Bool) {
         
         initDates()
-        
-//        buttonDates.append(startDate)
-//        buttonDates.append(endDate)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
     
     private func initDates() {
         // create dates
         todaysDate = NSDate()
         tenYearsAgo = NSDate(timeInterval: -315360000.0, sinceDate: todaysDate)
-//        let thirtyDaysAgo = NSDate(timeInterval: -2592000.0, sinceDate: todaysDate)
-        
-//        startDate = thirtyDaysAgo
-//        endDate = todaysDate
         
         buttonDates[0] = startDate
         buttonDates[1] = endDate
@@ -71,15 +63,6 @@ class SettingsViewController: UIViewController  {
         buttonDateString[1] = getFormattedStringFromDate(buttonDates[1])
 
     }
-    
-    private func setDates() {
-        
-        
-        // set date strings
-        
-        // set nsdate values
-    }
-    
     
     
     private func getFormattedStringFromDate(date: NSDate) -> String {
@@ -94,31 +77,6 @@ class SettingsViewController: UIViewController  {
     @IBAction func tappedCloseButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion:nil)
     }
-    
-
-//    @IBAction func tappedStartDateEditButton(sender: AnyObject) {
-//        
-//        DatePickerDialog().show("Start Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: startDate, minimumDate: tenYearsAgo, maximumDate: endDate, datePickerMode: .Date) { (date) in
-//            
-//            if let date = date {
-//                self.startDateLabel.text = self.getFormattedStringFromDate(date)
-//                self.startDate = date
-//                
-//            }
-//        }
-//    }
-//    
-//    
-//    @IBAction func tappedEndDateEditButton(sender: AnyObject) {
-//       
-//        DatePickerDialog().show("End Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: endDate, minimumDate: startDate, maximumDate: todaysDate, datePickerMode: .Date) { (date) in
-//            
-//            if let date = date {
-//                self.endDateLabel.text = self.getFormattedStringFromDate(date)
-//                self.endDate = date
-//            }
-//        }
-//    }
     
     
     @IBAction func tappedSearchButton(sender: AnyObject) {

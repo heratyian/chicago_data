@@ -68,7 +68,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0q-H3-yd3" customClass="SwiftyButton" customModule="SwiftyButton">
                                 <rect key="frame" x="0.0" y="510" width="320" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="cmC-n4-imc"/>
+                                    <constraint firstAttribute="height" constant="58" id="Vce-AU-Hb1"/>
                                 </constraints>
                                 <state key="normal" title="Search"/>
                                 <userDefinedRuntimeAttributes>
@@ -84,7 +84,7 @@
                                 <rect key="frame" x="0.0" y="104" width="320" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="wrR-Aq-s1D"/>
+                                    <constraint firstAttribute="height" constant="100" id="YTz-Mt-mhu"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" textLabel="SC6-6B-gUD" detailTextLabel="aMP-v2-hkC" rowHeight="50" style="IBUITableViewCellStyleValue1" id="bGw-Mz-3h2">
@@ -113,15 +113,39 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6H-gv-gFS" userLabel="BottomExitButton">
+                                <rect key="frame" x="0.0" y="205" width="320" height="297"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="tappedCloseButton:" destination="gQi-M9-ipI" eventType="touchUpInside" id="lTt-Wz-A7C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVk-eN-tEt" userLabel="TopExitButton">
+                                <rect key="frame" x="0.0" y="28" width="320" height="68"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="UGv-IQ-iTC"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tappedCloseButton:" destination="gQi-M9-ipI" eventType="touchUpInside" id="7bB-zq-pKw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="krn-s5-xP0" secondAttribute="trailing" id="3bT-2J-flf"/>
-                            <constraint firstItem="krn-s5-xP0" firstAttribute="trailing" secondItem="H0q-H3-yd3" secondAttribute="trailing" id="Aha-mk-HLz"/>
-                            <constraint firstItem="krn-s5-xP0" firstAttribute="leading" secondItem="H0q-H3-yd3" secondAttribute="leading" id="Ftk-hA-OaI"/>
-                            <constraint firstItem="krn-s5-xP0" firstAttribute="leading" secondItem="plf-3S-mCb" secondAttribute="leading" id="NR6-W9-bms"/>
-                            <constraint firstItem="H0q-H3-yd3" firstAttribute="bottom" secondItem="QhU-La-efG" secondAttribute="top" id="Vlw-v8-8yK"/>
-                            <constraint firstItem="krn-s5-xP0" firstAttribute="top" secondItem="6M4-bk-9kP" secondAttribute="bottom" constant="84" id="sZ3-Bo-2PH"/>
+                            <constraint firstItem="g6H-gv-gFS" firstAttribute="trailing" secondItem="H0q-H3-yd3" secondAttribute="trailing" id="3l1-v4-Cyn"/>
+                            <constraint firstItem="g6H-gv-gFS" firstAttribute="top" secondItem="krn-s5-xP0" secondAttribute="bottom" constant="1" id="696-O3-FAn"/>
+                            <constraint firstItem="NVk-eN-tEt" firstAttribute="leading" secondItem="plf-3S-mCb" secondAttribute="leading" id="ClQ-6P-24M"/>
+                            <constraint firstItem="NVk-eN-tEt" firstAttribute="trailing" secondItem="krn-s5-xP0" secondAttribute="trailing" id="LKQ-vi-TOc"/>
+                            <constraint firstItem="NVk-eN-tEt" firstAttribute="leading" secondItem="krn-s5-xP0" secondAttribute="leading" id="LX8-3D-Q42"/>
+                            <constraint firstAttribute="trailing" secondItem="NVk-eN-tEt" secondAttribute="trailing" id="OLZ-q0-MFu"/>
+                            <constraint firstItem="g6H-gv-gFS" firstAttribute="leading" secondItem="H0q-H3-yd3" secondAttribute="leading" id="bGE-di-aJj"/>
+                            <constraint firstItem="krn-s5-xP0" firstAttribute="trailing" secondItem="g6H-gv-gFS" secondAttribute="trailing" id="iil-qQ-VZJ"/>
+                            <constraint firstItem="H0q-H3-yd3" firstAttribute="top" secondItem="g6H-gv-gFS" secondAttribute="bottom" constant="8" symbolic="YES" id="lLG-o4-6HK"/>
+                            <constraint firstItem="krn-s5-xP0" firstAttribute="top" secondItem="NVk-eN-tEt" secondAttribute="bottom" constant="8" symbolic="YES" id="mJ1-do-Tvw"/>
+                            <constraint firstItem="krn-s5-xP0" firstAttribute="leading" secondItem="g6H-gv-gFS" secondAttribute="leading" id="nKI-sm-mB7"/>
+                            <constraint firstItem="H0q-H3-yd3" firstAttribute="bottom" secondItem="QhU-La-efG" secondAttribute="top" id="qYK-T7-dbu"/>
+                            <constraint firstItem="NVk-eN-tEt" firstAttribute="top" secondItem="6M4-bk-9kP" secondAttribute="bottom" constant="8" symbolic="YES" id="sfz-xL-1eA"/>
                         </constraints>
                     </view>
                     <connections>
