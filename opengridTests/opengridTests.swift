@@ -21,16 +21,34 @@ class opengridTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    func testExample() {
+//        // This is an example of a functional test case.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    }
+    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measureBlock {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
+    
+    func testSettingsViewControllerCreatesProperDates() {
+        
+//        let mapVC = MapViewController()
+//        mapVC.viewDidLoad()
+//        mapVC.performSegueWithIdentifier(SettingsSegueID, sender: mapVC)
+        
+        let settingsVC = SettingsViewController()
+        settingsVC.startDate = NSDate(timeIntervalSince1970: 0)
+        settingsVC.endDate = NSDate()
+        settingsVC.viewDidLoad()
+        
+        
+        XCTAssert(settingsVC.endDate.timeIntervalSince1970 > settingsVC.startDate.timeIntervalSince1970)
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    
     
 }

@@ -48,6 +48,16 @@
                ReferencedContainer = "container:opengrid.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CD4FA7F01D9078A9001309B8"
+               BuildableName = "Chicago DataTests.xctest"
+               BlueprintName = "Chicago DataTests"
+               ReferencedContainer = "container:opengrid.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
