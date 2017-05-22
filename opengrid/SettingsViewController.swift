@@ -11,7 +11,7 @@ import DatePickerDialog
 import SwiftyButton
 
 @objc protocol SettingsViewControllerDelegate: class {
-    func giveStartAndEndDate(start:NSDate, end: NSDate)
+    func giveStartAndEndDate(_ start:Date, end: Date)
 }
 
 class SettingsViewController: UIViewController  {
@@ -23,17 +23,17 @@ class SettingsViewController: UIViewController  {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: Properties
-    var todaysDate: NSDate!
-    var tenYearsAgo: NSDate!
-    var startDate: NSDate!
-    var endDate: NSDate!
+    var todaysDate: Date!
+    var tenYearsAgo: Date!
+    var startDate: Date!
+    var endDate: Date!
     
     // MARK: Constants
     let textCellIdentifier = "TextCell"
     let buttonTitles = ["From", "To"]
     
     let buttonDateString: NSMutableArray = []
-    var buttonDates = [NSDate(), NSDate()]
+    var buttonDates = [Date(), Date()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,28 +46,28 @@ class SettingsViewController: UIViewController  {
     
     
     // MARK: IBActions
-    @IBAction func tappedCloseButton(sender: AnyObject) {
+    @IBAction func tappedCloseButton(_ sender: AnyObject) {
         // dismiss view controller
-        self.dismissViewControllerAnimated(true, completion:nil)
+        self.dismiss(animated: true, completion:nil)
     }
     
-    @IBAction func tappedSearchButton(sender: AnyObject) {
+    @IBAction func tappedSearchButton(_ sender: AnyObject) {
         // send query to plenario with new dates
         // return to mapViewController
         // startDate and endDate objects
         
-        self.dismissViewControllerAnimated(true) {
+        self.dismiss(animated: true) {
             self.delegate?.giveStartAndEndDate(self.buttonDates[0], end: self.buttonDates[1])
         }
     }
     
-    private func tappedDateEdit(indexPath: NSIndexPath) {
+    fileprivate func tappedDateEdit(_ indexPath: IndexPath) {
         //title
         //startDate
         //endDate
-        var defaultDate = NSDate()
-        var minDate = NSDate()
-        var maxDate = NSDate()
+        var defaultDate = Date()
+        var minDate = Date()
+        var maxDate = Date()
         var titleString = String()
         
         if indexPath.row == 0 {
@@ -84,12 +84,12 @@ class SettingsViewController: UIViewController  {
             maxDate = todaysDate
         }
         
-        DatePickerDialog().show(titleString, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: defaultDate, minimumDate: minDate, maximumDate: maxDate, datePickerMode: .Date) { (date) in
+        DatePickerDialog().show(title: titleString, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: defaultDate, minimumDate: minDate, maximumDate: maxDate, datePickerMode: .date) { (date) in
             
             if let date = date {
                 
                 // cell
-                let cell = self.tableView.dequeueReusableCellWithIdentifier(self.textCellIdentifier, forIndexPath: indexPath)
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: self.textCellIdentifier, for: indexPath)
                 
                 cell.textLabel?.text = self.buttonTitles[indexPath.row]
                 cell.detailTextLabel?.text = self.getFormattedStringFromDate(date)
@@ -98,7 +98,7 @@ class SettingsViewController: UIViewController  {
                 self.buttonDates[indexPath.row] = date
                 self.buttonDateString[indexPath.row] = self.getFormattedStringFromDate(date)
                 
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
                     self.tableView.reloadData()
                 })
             }
@@ -109,10 +109,10 @@ class SettingsViewController: UIViewController  {
 // Dates
 extension SettingsViewController {
     
-    private func initDates() {
+    fileprivate func initDates() {
         // create dates
-        todaysDate = NSDate()
-        tenYearsAgo = NSDate(timeInterval: -315360000.0, sinceDate: todaysDate)
+        todaysDate = Date()
+        tenYearsAgo = Date(timeInterval: -315360000.0, since: todaysDate)
         
         buttonDates[0] = startDate
         buttonDates[1] = endDate
@@ -121,28 +121,28 @@ extension SettingsViewController {
         buttonDateString[1] = getFormattedStringFromDate(buttonDates[1])
     }
     
-    private func getFormattedStringFromDate(date: NSDate) -> String {
+    fileprivate func getFormattedStringFromDate(_ date: Date) -> String {
         // set date formatter
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "MMMM d, yyyy"
-        return formatter.stringFromDate(date)
+        return formatter.string(from: date)
     }
     
 }
 
 extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
         
         let row = indexPath.row
         cell.textLabel?.text = buttonTitles[row]
@@ -151,9 +151,9 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tappedDateEdit(indexPath)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

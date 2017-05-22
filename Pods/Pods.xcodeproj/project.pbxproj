@@ -1,0 +1,1218 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03A95EB83E0A8E10F7E0B4DB551D5200 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4685E50F6A2BBD288BA6293AEC8C156 /* DatePickerDialog.swift */; };
+		16E12301D8314FC850DA7A709F6BED0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		1A44B1C9686EB2145C7A7249EC362273 /* Pods-opengridTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E9E5A770C4DF1574C0F809BF0493D7 /* Pods-opengridTests-dummy.m */; };
+		244A2B0A90D9F348D638E58096455A13 /* PressableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052AC262EBACA925BD08B16A8361BA8 /* PressableButton.swift */; };
+		41C2795DA6B7D0CFC733BACBDFC25433 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		4BEE52036CF027C1A9ECBB79F11882AC /* GeoJSONFeatureCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70F88D9B69A4C77202C011374BEAC4E /* GeoJSONFeatureCollection.swift */; };
+		60C84B4A558D54606FFDF689DF71F0F9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ABFF020EDD559B826994B70BC6CD98 /* Utils.swift */; };
+		60E5A3DF90F9F68C18C673BBBA217D6B /* GeoJSONLineString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78998FD562799CD541612413153080CB /* GeoJSONLineString.swift */; };
+		718A7D61FC5DE2157846BDC154F2BEDA /* GeoJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DA3BFFFEFC7D9DCCD3D80EDA176084 /* GeoJSON-dummy.m */; };
+		7BB056BB4AD65CB66380CBDD52CB0FD3 /* DatePickerDialog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86E6E22A9EA7A02B15E4B5F655169091 /* DatePickerDialog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F105D7ECBB63DF4F05F852CF842123 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F794C383D2F7DC3901924721A9D3168 /* FlatButton.swift */; };
+		823879247E5F195DFB618418E48B7A31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		907432AD07EEF674E92E752BC34583AD /* GeoJSONFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D316F7EC8A6F31FB0EF0A971560745 /* GeoJSONFeature.swift */; };
+		9C13E50126B18EAB4A398092C8A3F355 /* Pods-opengrid-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3E06F8EE96A5D81237F82FE1A669840 /* Pods-opengrid-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F1B1E05141AEBFFDBAA4292B64F33F8 /* GeoJSONPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1ECEF71056E1A3880C0DFD8761CC68 /* GeoJSONPoint.swift */; };
+		AACA497B1460AD31EAEA01C77E4E2F8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		AACB1E9C51E793D9F1FE3BDA627E48BA /* Pods-opengridTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C4D45DC6892DF21EDDB4A6AA5C2236 /* Pods-opengridTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF679F388C8A015478AD2254F3CC9159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		B8D81194FC1118A5166F99A5D8E3D65D /* GeoJSONMulti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0929ED0520ADE4B6B818E04008C201EF /* GeoJSONMulti.swift */; };
+		B9E97B757A58AA1A1217937E9ADE8212 /* GeoJSONPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E369F47DEB787ECB1421400DB40D88 /* GeoJSONPolygon.swift */; };
+		BAEADECD9A85343C9AA6A852D9736A93 /* CustomPressableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E26983B16DA53F7E35ABB5A5813F5 /* CustomPressableButton.swift */; };
+		BF208E0A1EDF2D37349C894C2B5B6419 /* GeoJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E043EE6BD66FEECB6F1D3AB1465DB66 /* GeoJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C14B723866149D9C58490B9FC6AD9429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		CEEC3C916EDC2EE8CF72482EDA92F986 /* SwiftyButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F01A1C7D4AF3681D501166A17D255E0E /* SwiftyButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1D56FE79924157FC7D35DB7E133CFA7 /* Pods-opengridUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2E6EA31C3C20A09D0FEE392077233 /* Pods-opengridUITests-dummy.m */; };
+		D8353C8E9E79616F3E1B6BEB0DBE6772 /* Pods-opengrid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF75529A4FAB57E31905DDA29F2772D /* Pods-opengrid-dummy.m */; };
+		DE45DAEE660ADE5C146EE7CF7259F35A /* DatePickerDialog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B36469C77D3E2242D465FCC0DB757FB0 /* DatePickerDialog-dummy.m */; };
+		F9FA2DDECED60B009C66F3BAFE05D45E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		FBFE2CE930E4CBB2C0CC040713ED29F5 /* SwiftyButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B237659D579D04EC772B9969C201F6D7 /* SwiftyButton-dummy.m */; };
+		FFA9DB9048F5CF43ABE4AD4215CC6104 /* Pods-opengridUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15CCAB744B7805FE1AD4756459F358C9 /* Pods-opengridUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		167B73DD55113EA7AA16AFF57A0F0F7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 184A1650DC0B648BD756068E60BF2C59;
+			remoteInfo = DatePickerDialog;
+		};
+		64487C88C30D670F30C0548EE1FE5359 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B370F935E5F2D5813AAC131DF7FD03E;
+			remoteInfo = SwiftyButton;
+		};
+		DB741D6E04EAD5FA90E24007164157C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8838BFDB81AFB63A20AA959753B8825;
+			remoteInfo = GeoJSON;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006845454049777CB38E68403E277E77 /* Pods-opengridUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-opengridUITests-frameworks.sh"; sourceTree = "<group>"; };
+		01E9E5A770C4DF1574C0F809BF0493D7 /* Pods-opengridTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-opengridTests-dummy.m"; sourceTree = "<group>"; };
+		07ED32158376C47FAEE73B6BA41E467F /* SwiftyButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyButton.framework; path = SwiftyButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0929ED0520ADE4B6B818E04008C201EF /* GeoJSONMulti.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeoJSONMulti.swift; path = Pod/Classes/GeoJSONMulti.swift; sourceTree = "<group>"; };
+		0B71FCB62E146745731EDCB7AA4BE2E3 /* Pods-opengridUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-opengridUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0C20CB202DA72BCEC664F74C24798E1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FAEFDE0DA6ABCD21947FB46528CED64 /* DatePickerDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DatePickerDialog.framework; path = DatePickerDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF0CAB7DF3092B518D2E10C9893E491 /* Pods-opengrid-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-opengrid-resources.sh"; sourceTree = "<group>"; };
+		15CCAB744B7805FE1AD4756459F358C9 /* Pods-opengridUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-opengridUITests-umbrella.h"; sourceTree = "<group>"; };
+		2052AC262EBACA925BD08B16A8361BA8 /* PressableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PressableButton.swift; path = SwiftyButton/PressableButton.swift; sourceTree = "<group>"; };
+		236E0CCC029E1148FB13F59903DD720F /* Pods-opengridTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-opengridTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		26E6059F6C731E0EC4B1DCC2B45C0EE2 /* Pods-opengrid-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-opengrid-frameworks.sh"; sourceTree = "<group>"; };
+		2878DCA3BE8FB81B67CB4D77E8F9B94C /* GeoJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GeoJSON-prefix.pch"; sourceTree = "<group>"; };
+		2DA5CC9684FD27383C949112C90F5C15 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3152D10303AE8DFB58AD22388B0A2772 /* Pods-opengridUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-opengridUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3630F8F6D7344C9BC352893171581143 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B319096AA217AC46600D1F954DA32DE /* Pods-opengridTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-opengridTests.modulemap"; sourceTree = "<group>"; };
+		3F46BDA2B4AA3BE5C57CF729E8219DE8 /* DatePickerDialog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DatePickerDialog.modulemap; sourceTree = "<group>"; };
+		44DA3BFFFEFC7D9DCCD3D80EDA176084 /* GeoJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GeoJSON-dummy.m"; sourceTree = "<group>"; };
+		480798BAB03AC77561408C747C9C59A9 /* Pods-opengridTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-opengridTests-frameworks.sh"; sourceTree = "<group>"; };
+		4831B9E401146B49A58C84F5144A03F8 /* Pods-opengrid-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-opengrid-acknowledgements.plist"; sourceTree = "<group>"; };
+		4E043EE6BD66FEECB6F1D3AB1465DB66 /* GeoJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GeoJSON-umbrella.h"; sourceTree = "<group>"; };
+		4FC4E0F7A0581F85A423C5E31B8D3EF4 /* SwiftyButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-prefix.pch"; sourceTree = "<group>"; };
+		50E81896C24C2673892C6904040082E4 /* Pods_opengridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_opengridUITests.framework; path = "Pods-opengridUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53D316F7EC8A6F31FB0EF0A971560745 /* GeoJSONFeature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeoJSONFeature.swift; path = Pod/Classes/GeoJSONFeature.swift; sourceTree = "<group>"; };
+		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		65D9AFD31002BE0D4F4CB5A01C221AF2 /* Pods-opengridTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-opengridTests.debug.xcconfig"; sourceTree = "<group>"; };
+		733A2C639EB672DDDE55308F01004590 /* DatePickerDialog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DatePickerDialog.xcconfig; sourceTree = "<group>"; };
+		78998FD562799CD541612413153080CB /* GeoJSONLineString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeoJSONLineString.swift; path = Pod/Classes/GeoJSONLineString.swift; sourceTree = "<group>"; };
+		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		81651BE1AB551ACBF3C52203050C40F2 /* Pods-opengridTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-opengridTests.release.xcconfig"; sourceTree = "<group>"; };
+		830E26983B16DA53F7E35ABB5A5813F5 /* CustomPressableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomPressableButton.swift; path = SwiftyButton/CustomPressableButton.swift; sourceTree = "<group>"; };
+		86E6E22A9EA7A02B15E4B5F655169091 /* DatePickerDialog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DatePickerDialog-umbrella.h"; sourceTree = "<group>"; };
+		88963B68C34EEED1DB1D9FF55FE69234 /* GeoJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GeoJSON.modulemap; sourceTree = "<group>"; };
+		8F794C383D2F7DC3901924721A9D3168 /* FlatButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlatButton.swift; path = SwiftyButton/FlatButton.swift; sourceTree = "<group>"; };
+		91CAA2F5644BED1C3DEEB9BED19B44B9 /* Pods-opengridUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-opengridUITests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96E61D72C3590E91C447C0B1A74393A0 /* Pods-opengrid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-opengrid.modulemap"; sourceTree = "<group>"; };
+		A3E06F8EE96A5D81237F82FE1A669840 /* Pods-opengrid-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-opengrid-umbrella.h"; sourceTree = "<group>"; };
+		A70F88D9B69A4C77202C011374BEAC4E /* GeoJSONFeatureCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeoJSONFeatureCollection.swift; path = Pod/Classes/GeoJSONFeatureCollection.swift; sourceTree = "<group>"; };
+		AA1ECEF71056E1A3880C0DFD8761CC68 /* GeoJSONPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeoJSONPoint.swift; path = Pod/Classes/GeoJSONPoint.swift; sourceTree = "<group>"; };
+		B0DF1969803620ABF1F9A2465BF0A988 /* Pods-opengrid-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-opengrid-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B237659D579D04EC772B9969C201F6D7 /* SwiftyButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyButton-dummy.m"; sourceTree = "<group>"; };
+		B36469C77D3E2242D465FCC0DB757FB0 /* DatePickerDialog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DatePickerDialog-dummy.m"; sourceTree = "<group>"; };
+		B4685E50F6A2BBD288BA6293AEC8C156 /* DatePickerDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerDialog.swift; path = Sources/DatePickerDialog.swift; sourceTree = "<group>"; };
+		B5036DD101A99D04C464DEF2EDE5D923 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B52757ABB4B5C6859240359DE2C33258 /* SwiftyButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyButton.modulemap; sourceTree = "<group>"; };
+		B54805745C64EB8519BDB2C21CF8BE05 /* Pods_opengrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_opengrid.framework; path = "Pods-opengrid.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9ABFF020EDD559B826994B70BC6CD98 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = SwiftyButton/Utils.swift; sourceTree = "<group>"; };
+		BAF07EB049FEF5D7519373FB2BB77578 /* Pods-opengrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-opengrid.debug.xcconfig"; sourceTree = "<group>"; };
+		BFCC1ADC69C0CFB0374F65B85E08E447 /* Pods-opengridTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-opengridTests-resources.sh"; sourceTree = "<group>"; };
+		C1C4D45DC6892DF21EDDB4A6AA5C2236 /* Pods-opengridTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-opengridTests-umbrella.h"; sourceTree = "<group>"; };
+		C233D8F73D5C56CB62F27E94DC8C548E /* Pods-opengrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-opengrid.release.xcconfig"; sourceTree = "<group>"; };
+		C4433D62ABE434FE2E1A08B4B57B21CE /* DatePickerDialog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DatePickerDialog-prefix.pch"; sourceTree = "<group>"; };
+		C7762A97182BE77F138CCA6EF663F9F1 /* GeoJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GeoJSON.xcconfig; sourceTree = "<group>"; };
+		C91E59F88EE61BB099F93E665A0AA998 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0A0581236990839A80CA7DF8AB7410 /* Pods-opengridUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-opengridUITests-resources.sh"; sourceTree = "<group>"; };
+		CE54A42E289BEFC60A8EE60DC87A1374 /* SwiftyButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyButton.xcconfig; sourceTree = "<group>"; };
+		D37F3C44CE94ED30366C37F5517A570E /* Pods-opengridUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-opengridUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DA69A1825B67F15EBF5AA7F60E37DD36 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE2E6EA31C3C20A09D0FEE392077233 /* Pods-opengridUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-opengridUITests-dummy.m"; sourceTree = "<group>"; };
+		E003614DC6DC22914D4FFDAB74B98122 /* Pods-opengridUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-opengridUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EED3C194EB77E7E2A5918A1394519D56 /* Pods_opengridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_opengridTests.framework; path = "Pods-opengridTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFACDDB68C3991F41FCBA2CB8555D546 /* GeoJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GeoJSON.framework; path = GeoJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01A1C7D4AF3681D501166A17D255E0E /* SwiftyButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-umbrella.h"; sourceTree = "<group>"; };
+		F5E369F47DEB787ECB1421400DB40D88 /* GeoJSONPolygon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeoJSONPolygon.swift; path = Pod/Classes/GeoJSONPolygon.swift; sourceTree = "<group>"; };
+		FAF75529A4FAB57E31905DDA29F2772D /* Pods-opengrid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-opengrid-dummy.m"; sourceTree = "<group>"; };
+		FB66217C60AECE44960B6ADB3FFC52F6 /* Pods-opengridTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-opengridTests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31AE3E263B8032AC2966F95252E5AADC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823879247E5F195DFB618418E48B7A31 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92FD7D4D7A5A83BE7BF136E2159014E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16E12301D8314FC850DA7A709F6BED0F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B31C4586AA00E3DB6B2D250EEDBEC43C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF679F388C8A015478AD2254F3CC9159 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD29E28B2EF77AD9EC5BA5D5DCD600BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9FA2DDECED60B009C66F3BAFE05D45E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3F39046D2F0ED2706360B65AA9C8394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41C2795DA6B7D0CFC733BACBDFC25433 /* Foundation.framework in Frameworks */,
+				AACA497B1460AD31EAEA01C77E4E2F8B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68393B3EF167C7284EB6EF8DBF6AD1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C14B723866149D9C58490B9FC6AD9429 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1365EF0D2338E7F36B7F2D158F564482 /* SwiftyButton */ = {
+			isa = PBXGroup;
+			children = (
+				830E26983B16DA53F7E35ABB5A5813F5 /* CustomPressableButton.swift */,
+				8F794C383D2F7DC3901924721A9D3168 /* FlatButton.swift */,
+				2052AC262EBACA925BD08B16A8361BA8 /* PressableButton.swift */,
+				B9ABFF020EDD559B826994B70BC6CD98 /* Utils.swift */,
+				C5329D559187E56F3ACCD7751E60DBD0 /* Support Files */,
+			);
+			name = SwiftyButton;
+			path = SwiftyButton;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BEC0DF896E830E48272C5A70FAB22E8 /* DatePickerDialog */ = {
+			isa = PBXGroup;
+			children = (
+				B4685E50F6A2BBD288BA6293AEC8C156 /* DatePickerDialog.swift */,
+				880DC8188FC214B13D00773271493E0D /* Support Files */,
+			);
+			name = DatePickerDialog;
+			path = DatePickerDialog;
+			sourceTree = "<group>";
+		};
+		73F2F5C1507B73DF9DF9AB7944BAC553 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FAEFDE0DA6ABCD21947FB46528CED64 /* DatePickerDialog.framework */,
+				EFACDDB68C3991F41FCBA2CB8555D546 /* GeoJSON.framework */,
+				B54805745C64EB8519BDB2C21CF8BE05 /* Pods_opengrid.framework */,
+				EED3C194EB77E7E2A5918A1394519D56 /* Pods_opengridTests.framework */,
+				50E81896C24C2673892C6904040082E4 /* Pods_opengridUITests.framework */,
+				07ED32158376C47FAEE73B6BA41E467F /* SwiftyButton.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				C6D00D9D6DD143F9F1AAD95F6F75E24E /* Pods */,
+				73F2F5C1507B73DF9DF9AB7944BAC553 /* Products */,
+				C7F74EDB65B18B8FCA2EF4EA3A6FBCFB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E4BE76A24E4F0F9E83F5878AFC1D54D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88963B68C34EEED1DB1D9FF55FE69234 /* GeoJSON.modulemap */,
+				C7762A97182BE77F138CCA6EF663F9F1 /* GeoJSON.xcconfig */,
+				44DA3BFFFEFC7D9DCCD3D80EDA176084 /* GeoJSON-dummy.m */,
+				2878DCA3BE8FB81B67CB4D77E8F9B94C /* GeoJSON-prefix.pch */,
+				4E043EE6BD66FEECB6F1D3AB1465DB66 /* GeoJSON-umbrella.h */,
+				C91E59F88EE61BB099F93E665A0AA998 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GeoJSON";
+			sourceTree = "<group>";
+		};
+		880DC8188FC214B13D00773271493E0D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F46BDA2B4AA3BE5C57CF729E8219DE8 /* DatePickerDialog.modulemap */,
+				733A2C639EB672DDDE55308F01004590 /* DatePickerDialog.xcconfig */,
+				B36469C77D3E2242D465FCC0DB757FB0 /* DatePickerDialog-dummy.m */,
+				C4433D62ABE434FE2E1A08B4B57B21CE /* DatePickerDialog-prefix.pch */,
+				86E6E22A9EA7A02B15E4B5F655169091 /* DatePickerDialog-umbrella.h */,
+				0C20CB202DA72BCEC664F74C24798E1F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DatePickerDialog";
+			sourceTree = "<group>";
+		};
+		BCC41E3B427959894CB4DAAA48490468 /* GeoJSON */ = {
+			isa = PBXGroup;
+			children = (
+				53D316F7EC8A6F31FB0EF0A971560745 /* GeoJSONFeature.swift */,
+				A70F88D9B69A4C77202C011374BEAC4E /* GeoJSONFeatureCollection.swift */,
+				78998FD562799CD541612413153080CB /* GeoJSONLineString.swift */,
+				0929ED0520ADE4B6B818E04008C201EF /* GeoJSONMulti.swift */,
+				AA1ECEF71056E1A3880C0DFD8761CC68 /* GeoJSONPoint.swift */,
+				F5E369F47DEB787ECB1421400DB40D88 /* GeoJSONPolygon.swift */,
+				7E4BE76A24E4F0F9E83F5878AFC1D54D /* Support Files */,
+			);
+			name = GeoJSON;
+			path = GeoJSON;
+			sourceTree = "<group>";
+		};
+		C5329D559187E56F3ACCD7751E60DBD0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5036DD101A99D04C464DEF2EDE5D923 /* Info.plist */,
+				B52757ABB4B5C6859240359DE2C33258 /* SwiftyButton.modulemap */,
+				CE54A42E289BEFC60A8EE60DC87A1374 /* SwiftyButton.xcconfig */,
+				B237659D579D04EC772B9969C201F6D7 /* SwiftyButton-dummy.m */,
+				4FC4E0F7A0581F85A423C5E31B8D3EF4 /* SwiftyButton-prefix.pch */,
+				F01A1C7D4AF3681D501166A17D255E0E /* SwiftyButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyButton";
+			sourceTree = "<group>";
+		};
+		C66852696F6CE52C930F69B8791819B7 /* Pods-opengridTests */ = {
+			isa = PBXGroup;
+			children = (
+				3630F8F6D7344C9BC352893171581143 /* Info.plist */,
+				3B319096AA217AC46600D1F954DA32DE /* Pods-opengridTests.modulemap */,
+				236E0CCC029E1148FB13F59903DD720F /* Pods-opengridTests-acknowledgements.markdown */,
+				FB66217C60AECE44960B6ADB3FFC52F6 /* Pods-opengridTests-acknowledgements.plist */,
+				01E9E5A770C4DF1574C0F809BF0493D7 /* Pods-opengridTests-dummy.m */,
+				480798BAB03AC77561408C747C9C59A9 /* Pods-opengridTests-frameworks.sh */,
+				BFCC1ADC69C0CFB0374F65B85E08E447 /* Pods-opengridTests-resources.sh */,
+				C1C4D45DC6892DF21EDDB4A6AA5C2236 /* Pods-opengridTests-umbrella.h */,
+				65D9AFD31002BE0D4F4CB5A01C221AF2 /* Pods-opengridTests.debug.xcconfig */,
+				81651BE1AB551ACBF3C52203050C40F2 /* Pods-opengridTests.release.xcconfig */,
+			);
+			name = "Pods-opengridTests";
+			path = "Target Support Files/Pods-opengridTests";
+			sourceTree = "<group>";
+		};
+		C6D00D9D6DD143F9F1AAD95F6F75E24E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BEC0DF896E830E48272C5A70FAB22E8 /* DatePickerDialog */,
+				BCC41E3B427959894CB4DAAA48490468 /* GeoJSON */,
+				1365EF0D2338E7F36B7F2D158F564482 /* SwiftyButton */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C7F74EDB65B18B8FCA2EF4EA3A6FBCFB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCC5F825E78B400B7AFCC415313F7F1B /* Pods-opengrid */,
+				C66852696F6CE52C930F69B8791819B7 /* Pods-opengridTests */,
+				EB8D9503F768DBF9B4646D68670A5900 /* Pods-opengridUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
+				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EB8D9503F768DBF9B4646D68670A5900 /* Pods-opengridUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DA5CC9684FD27383C949112C90F5C15 /* Info.plist */,
+				91CAA2F5644BED1C3DEEB9BED19B44B9 /* Pods-opengridUITests.modulemap */,
+				3152D10303AE8DFB58AD22388B0A2772 /* Pods-opengridUITests-acknowledgements.markdown */,
+				D37F3C44CE94ED30366C37F5517A570E /* Pods-opengridUITests-acknowledgements.plist */,
+				DEE2E6EA31C3C20A09D0FEE392077233 /* Pods-opengridUITests-dummy.m */,
+				006845454049777CB38E68403E277E77 /* Pods-opengridUITests-frameworks.sh */,
+				CD0A0581236990839A80CA7DF8AB7410 /* Pods-opengridUITests-resources.sh */,
+				15CCAB744B7805FE1AD4756459F358C9 /* Pods-opengridUITests-umbrella.h */,
+				E003614DC6DC22914D4FFDAB74B98122 /* Pods-opengridUITests.debug.xcconfig */,
+				0B71FCB62E146745731EDCB7AA4BE2E3 /* Pods-opengridUITests.release.xcconfig */,
+			);
+			name = "Pods-opengridUITests";
+			path = "Target Support Files/Pods-opengridUITests";
+			sourceTree = "<group>";
+		};
+		FCC5F825E78B400B7AFCC415313F7F1B /* Pods-opengrid */ = {
+			isa = PBXGroup;
+			children = (
+				DA69A1825B67F15EBF5AA7F60E37DD36 /* Info.plist */,
+				96E61D72C3590E91C447C0B1A74393A0 /* Pods-opengrid.modulemap */,
+				B0DF1969803620ABF1F9A2465BF0A988 /* Pods-opengrid-acknowledgements.markdown */,
+				4831B9E401146B49A58C84F5144A03F8 /* Pods-opengrid-acknowledgements.plist */,
+				FAF75529A4FAB57E31905DDA29F2772D /* Pods-opengrid-dummy.m */,
+				26E6059F6C731E0EC4B1DCC2B45C0EE2 /* Pods-opengrid-frameworks.sh */,
+				0FF0CAB7DF3092B518D2E10C9893E491 /* Pods-opengrid-resources.sh */,
+				A3E06F8EE96A5D81237F82FE1A669840 /* Pods-opengrid-umbrella.h */,
+				BAF07EB049FEF5D7519373FB2BB77578 /* Pods-opengrid.debug.xcconfig */,
+				C233D8F73D5C56CB62F27E94DC8C548E /* Pods-opengrid.release.xcconfig */,
+			);
+			name = "Pods-opengrid";
+			path = "Target Support Files/Pods-opengrid";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2675140161515F2E9F99FEB0F11F1ED3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB056BB4AD65CB66380CBDD52CB0FD3 /* DatePickerDialog-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F15B0981D5F1E7C1857A4CD2F203096 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEEC3C916EDC2EE8CF72482EDA92F986 /* SwiftyButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD9879D38F16630257BF293AE08A2EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C13E50126B18EAB4A398092C8A3F355 /* Pods-opengrid-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C8F40A1BF90BBB836E84FA9B61F382F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACB1E9C51E793D9F1FE3BDA627E48BA /* Pods-opengridTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DF655A670E76E9791A7EC9FDBCB760 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF208E0A1EDF2D37349C894C2B5B6419 /* GeoJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D1D500352E4F5BB1C16EC86BB82B4D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA9DB9048F5CF43ABE4AD4215CC6104 /* Pods-opengridUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		17FFEA41EDA8D0D864E815B7C760C59E /* Pods-opengridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA088BD668779751D3B7696E0976388 /* Build configuration list for PBXNativeTarget "Pods-opengridTests" */;
+			buildPhases = (
+				16A4EA943713E3C7051B1B4C6598A51C /* Sources */,
+				DD29E28B2EF77AD9EC5BA5D5DCD600BC /* Frameworks */,
+				9C8F40A1BF90BBB836E84FA9B61F382F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-opengridTests";
+			productName = "Pods-opengridTests";
+			productReference = EED3C194EB77E7E2A5918A1394519D56 /* Pods_opengridTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		184A1650DC0B648BD756068E60BF2C59 /* DatePickerDialog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD5CF02785F10F0CDA34F90832C66CFA /* Build configuration list for PBXNativeTarget "DatePickerDialog" */;
+			buildPhases = (
+				1D432F1231D861C3C85333A043376EAE /* Sources */,
+				31AE3E263B8032AC2966F95252E5AADC /* Frameworks */,
+				2675140161515F2E9F99FEB0F11F1ED3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DatePickerDialog;
+			productName = DatePickerDialog;
+			productReference = 0FAEFDE0DA6ABCD21947FB46528CED64 /* DatePickerDialog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6C531F00DBB44E45C98ED9F6CC32DDF2 /* Pods-opengrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFF93483D8827220189420B9A7FA7206 /* Build configuration list for PBXNativeTarget "Pods-opengrid" */;
+			buildPhases = (
+				887AEB5693F99F355F8F021DF157A77D /* Sources */,
+				92FD7D4D7A5A83BE7BF136E2159014E9 /* Frameworks */,
+				5AD9879D38F16630257BF293AE08A2EE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				343C37F2F7DFBF0BB1C520AB9C1A8F4C /* PBXTargetDependency */,
+				353A1EB653E8F38A7106BFE7F1C0FC61 /* PBXTargetDependency */,
+				E746DCD95AFC663E787CEABAC30C980C /* PBXTargetDependency */,
+			);
+			name = "Pods-opengrid";
+			productName = "Pods-opengrid";
+			productReference = B54805745C64EB8519BDB2C21CF8BE05 /* Pods_opengrid.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B370F935E5F2D5813AAC131DF7FD03E /* SwiftyButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D251BC7C4CB71B0B06FDDC72A87823C /* Build configuration list for PBXNativeTarget "SwiftyButton" */;
+			buildPhases = (
+				D493CC40A62FCFC8598F51BD55B4095E /* Sources */,
+				F3F39046D2F0ED2706360B65AA9C8394 /* Frameworks */,
+				3F15B0981D5F1E7C1857A4CD2F203096 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyButton;
+			productName = SwiftyButton;
+			productReference = 07ED32158376C47FAEE73B6BA41E467F /* SwiftyButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8838BFDB81AFB63A20AA959753B8825 /* GeoJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED9D5446B0AC35C89960583EBEA5E135 /* Build configuration list for PBXNativeTarget "GeoJSON" */;
+			buildPhases = (
+				429CEEAD998FB6E0D81E5CB449FFFE7F /* Sources */,
+				B31C4586AA00E3DB6B2D250EEDBEC43C /* Frameworks */,
+				C4DF655A670E76E9791A7EC9FDBCB760 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoJSON;
+			productName = GeoJSON;
+			productReference = EFACDDB68C3991F41FCBA2CB8555D546 /* GeoJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA4979BE0DBB0D2A77F53C73722CAE79 /* Pods-opengridUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B61E32F6C3D2E344E1194E21853B225 /* Build configuration list for PBXNativeTarget "Pods-opengridUITests" */;
+			buildPhases = (
+				3AA130F1C65B8EE2CA2E5827CFF7BB3F /* Sources */,
+				F68393B3EF167C7284EB6EF8DBF6AD1C /* Frameworks */,
+				F8D1D500352E4F5BB1C16EC86BB82B4D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-opengridUITests";
+			productName = "Pods-opengridUITests";
+			productReference = 50E81896C24C2673892C6904040082E4 /* Pods_opengridUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 73F2F5C1507B73DF9DF9AB7944BAC553 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				184A1650DC0B648BD756068E60BF2C59 /* DatePickerDialog */,
+				D8838BFDB81AFB63A20AA959753B8825 /* GeoJSON */,
+				6C531F00DBB44E45C98ED9F6CC32DDF2 /* Pods-opengrid */,
+				17FFEA41EDA8D0D864E815B7C760C59E /* Pods-opengridTests */,
+				DA4979BE0DBB0D2A77F53C73722CAE79 /* Pods-opengridUITests */,
+				8B370F935E5F2D5813AAC131DF7FD03E /* SwiftyButton */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16A4EA943713E3C7051B1B4C6598A51C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A44B1C9686EB2145C7A7249EC362273 /* Pods-opengridTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D432F1231D861C3C85333A043376EAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE45DAEE660ADE5C146EE7CF7259F35A /* DatePickerDialog-dummy.m in Sources */,
+				03A95EB83E0A8E10F7E0B4DB551D5200 /* DatePickerDialog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA130F1C65B8EE2CA2E5827CFF7BB3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D56FE79924157FC7D35DB7E133CFA7 /* Pods-opengridUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		429CEEAD998FB6E0D81E5CB449FFFE7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718A7D61FC5DE2157846BDC154F2BEDA /* GeoJSON-dummy.m in Sources */,
+				907432AD07EEF674E92E752BC34583AD /* GeoJSONFeature.swift in Sources */,
+				4BEE52036CF027C1A9ECBB79F11882AC /* GeoJSONFeatureCollection.swift in Sources */,
+				60E5A3DF90F9F68C18C673BBBA217D6B /* GeoJSONLineString.swift in Sources */,
+				B8D81194FC1118A5166F99A5D8E3D65D /* GeoJSONMulti.swift in Sources */,
+				9F1B1E05141AEBFFDBAA4292B64F33F8 /* GeoJSONPoint.swift in Sources */,
+				B9E97B757A58AA1A1217937E9ADE8212 /* GeoJSONPolygon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		887AEB5693F99F355F8F021DF157A77D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8353C8E9E79616F3E1B6BEB0DBE6772 /* Pods-opengrid-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D493CC40A62FCFC8598F51BD55B4095E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAEADECD9A85343C9AA6A852D9736A93 /* CustomPressableButton.swift in Sources */,
+				80F105D7ECBB63DF4F05F852CF842123 /* FlatButton.swift in Sources */,
+				244A2B0A90D9F348D638E58096455A13 /* PressableButton.swift in Sources */,
+				FBFE2CE930E4CBB2C0CC040713ED29F5 /* SwiftyButton-dummy.m in Sources */,
+				60C84B4A558D54606FFDF689DF71F0F9 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		343C37F2F7DFBF0BB1C520AB9C1A8F4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DatePickerDialog;
+			target = 184A1650DC0B648BD756068E60BF2C59 /* DatePickerDialog */;
+			targetProxy = 167B73DD55113EA7AA16AFF57A0F0F7F /* PBXContainerItemProxy */;
+		};
+		353A1EB653E8F38A7106BFE7F1C0FC61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GeoJSON;
+			target = D8838BFDB81AFB63A20AA959753B8825 /* GeoJSON */;
+			targetProxy = DB741D6E04EAD5FA90E24007164157C7 /* PBXContainerItemProxy */;
+		};
+		E746DCD95AFC663E787CEABAC30C980C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyButton;
+			target = 8B370F935E5F2D5813AAC131DF7FD03E /* SwiftyButton */;
+			targetProxy = 64487C88C30D670F30C0548EE1FE5359 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13B9766F067C56EBCC61D496465D5582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAF07EB049FEF5D7519373FB2BB77578 /* Pods-opengrid.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-opengrid/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-opengrid/Pods-opengrid.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_opengrid;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		25B13C2AC33CA523493CA6CD6AED2229 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE54A42E289BEFC60A8EE60DC87A1374 /* SwiftyButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyButton/SwiftyButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyButton/SwiftyButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2A6BA1EC79F011CC803B929BC0F61676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7762A97182BE77F138CCA6EF663F9F1 /* GeoJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GeoJSON/GeoJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GeoJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GeoJSON/GeoJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GeoJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5BBB52D298C5783EEA30E519DE97BAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 733A2C639EB672DDDE55308F01004590 /* DatePickerDialog.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DatePickerDialog/DatePickerDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DatePickerDialog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DatePickerDialog/DatePickerDialog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DatePickerDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5F696ADF286018538608AF5253A41D70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65D9AFD31002BE0D4F4CB5A01C221AF2 /* Pods-opengridTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-opengridTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-opengridTests/Pods-opengridTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_opengridTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		61D0B9A2A9FA597C3B94BC6521CBE283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7762A97182BE77F138CCA6EF663F9F1 /* GeoJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GeoJSON/GeoJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GeoJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GeoJSON/GeoJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GeoJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		650967F240B412C5D7E861211D63CF5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B71FCB62E146745731EDCB7AA4BE2E3 /* Pods-opengridUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-opengridUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-opengridUITests/Pods-opengridUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_opengridUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		793746DC6F17FDBC62FBB4A38466CA38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C233D8F73D5C56CB62F27E94DC8C548E /* Pods-opengrid.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-opengrid/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-opengrid/Pods-opengrid.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_opengrid;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7A83D5DA459FEF013B8BC8813FAC37DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 733A2C639EB672DDDE55308F01004590 /* DatePickerDialog.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DatePickerDialog/DatePickerDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DatePickerDialog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DatePickerDialog/DatePickerDialog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DatePickerDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7C475C0A00577D78585CC4C74C165E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81651BE1AB551ACBF3C52203050C40F2 /* Pods-opengridTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-opengridTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-opengridTests/Pods-opengridTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_opengridTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DDDBA88A1A595573D699341165C3FF2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE54A42E289BEFC60A8EE60DC87A1374 /* SwiftyButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyButton/SwiftyButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyButton/SwiftyButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E737FC54CE5B15DCF4316C426C7DD878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E003614DC6DC22914D4FFDAB74B98122 /* Pods-opengridUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-opengridUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-opengridUITests/Pods-opengridUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_opengridUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */,
+				862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA088BD668779751D3B7696E0976388 /* Build configuration list for PBXNativeTarget "Pods-opengridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F696ADF286018538608AF5253A41D70 /* Debug */,
+				A7C475C0A00577D78585CC4C74C165E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D251BC7C4CB71B0B06FDDC72A87823C /* Build configuration list for PBXNativeTarget "SwiftyButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDBA88A1A595573D699341165C3FF2E /* Debug */,
+				25B13C2AC33CA523493CA6CD6AED2229 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B61E32F6C3D2E344E1194E21853B225 /* Build configuration list for PBXNativeTarget "Pods-opengridUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E737FC54CE5B15DCF4316C426C7DD878 /* Debug */,
+				650967F240B412C5D7E861211D63CF5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFF93483D8827220189420B9A7FA7206 /* Build configuration list for PBXNativeTarget "Pods-opengrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B9766F067C56EBCC61D496465D5582 /* Debug */,
+				793746DC6F17FDBC62FBB4A38466CA38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED9D5446B0AC35C89960583EBEA5E135 /* Build configuration list for PBXNativeTarget "GeoJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A6BA1EC79F011CC803B929BC0F61676 /* Debug */,
+				61D0B9A2A9FA597C3B94BC6521CBE283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD5CF02785F10F0CDA34F90832C66CFA /* Build configuration list for PBXNativeTarget "DatePickerDialog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BBB52D298C5783EEA30E519DE97BAC5 /* Debug */,
+				7A83D5DA459FEF013B8BC8813FAC37DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

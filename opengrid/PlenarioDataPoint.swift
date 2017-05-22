@@ -71,7 +71,7 @@ struct PlenarioDataPoint {
         
     }
     
-    static func pointsFromResults(results: [[String:AnyObject]]) -> [PlenarioDataPoint] {
+    static func pointsFromResults(_ results: [[String:AnyObject]]) -> [PlenarioDataPoint] {
         
         var points = [PlenarioDataPoint]()
  

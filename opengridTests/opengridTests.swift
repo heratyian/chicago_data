@@ -40,8 +40,8 @@ class opengridTests: XCTestCase {
 //        mapVC.performSegueWithIdentifier(SettingsSegueID, sender: mapVC)
         
         let settingsVC = SettingsViewController()
-        settingsVC.startDate = NSDate(timeIntervalSince1970: 0)
-        settingsVC.endDate = NSDate()
+        settingsVC.startDate = Date(timeIntervalSince1970: 0)
+        settingsVC.endDate = Date()
         settingsVC.viewDidLoad()
         
         

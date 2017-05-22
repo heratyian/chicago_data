@@ -12,53 +12,53 @@ import MapKit
 extension PlenarioClient {
     
     // MARK: GET convenience methods
-    func getCrimeLocations(geoJSONString: String, completionHandlerForLocations: (points: [PlenarioDataPoint]?, error: NSError?) -> Void) {
+    func getCrimeLocations(_ geoJSONString: String, completionHandlerForLocations: @escaping (_ points: [PlenarioDataPoint]?, _ error: NSError?) -> Void) {
         
         // parameters
         let parameters: [String:String] = [PlenarioClient.ParameterKeys.LocationGeomWithin : geoJSONString]
         
         // create URL for crime data
-        let url = plenarioCrimeURLFromParameters(parameters)
+        let url = plenarioCrimeURLFromParameters(parameters as [String : AnyObject])
         
         taskForGetMethod(url) { (result, error) in
             if let error = error {
                 print(error)
             } else {
-                if let result = result[ResponseKeys.Objects] as? [[String:AnyObject]] {
+                if let result = result?[ResponseKeys.Objects] as? [[String:AnyObject]] {
                     let points = PlenarioDataPoint.pointsFromResults(result)
-                    completionHandlerForLocations(points: points, error: nil)
+                    completionHandlerForLocations(points, nil)
                 } else {
-                    completionHandlerForLocations(points: nil, error: NSError(domain: "getLocations", code: 0, userInfo: [NSLocalizedDescriptionKey: "could not parse getLocations"]))
+                    completionHandlerForLocations(nil, NSError(domain: "getLocations", code: 0, userInfo: [NSLocalizedDescriptionKey: "could not parse getLocations"]))
                 }
             }
         }
     }
     
-    func plenarioCrimeURLFromParameters(parameters: [String:AnyObject]) -> NSURL {
+    func plenarioCrimeURLFromParameters(_ parameters: [String:AnyObject]) -> URL {
         // input: take parameters as [String:AnyObject]
         // return url
         
-        let components = NSURLComponents()
+        var components = URLComponents()
         components.scheme = PlenarioClient.Plenario.APIScheme
         components.host = PlenarioClient.Plenario.APIHost
         components.path = PlenarioClient.Plenario.APIPath
         
-        components.queryItems = [NSURLQueryItem]()
+        components.queryItems = [URLQueryItem]()
         
         // set first query item to crime dataset
-        let queryItem = NSURLQueryItem(name: PlenarioClient.ParameterKeys.DatasetName, value: "\(PlenarioClient.ParameterValues.DatasetNameCrime)")
+        let queryItem = URLQueryItem(name: PlenarioClient.ParameterKeys.DatasetName, value: "\(PlenarioClient.ParameterValues.DatasetNameCrime)")
         components.queryItems!.append(queryItem)
         
         for (key, value) in parameters {
-            let queryItem = NSURLQueryItem(name: key, value: "\(value)")
+            let queryItem = URLQueryItem(name: key, value: "\(value)")
             components.queryItems!.append(queryItem)
         }
         
-        return components.URL!
+        return components.url!
     }
     
     // TODO: add timeline and dataset parameters
-    func getPlenarioDataPoints(centerCoordinate: CLLocationCoordinate2D, latitudeDelta: CLLocationDegrees, longitudeDelta: CLLocationDegrees, completionHandlerForPlenarioDataPoints: (points:[PlenarioDataPoint]?, error: NSError?) -> Void) {
+    func getPlenarioDataPoints(_ centerCoordinate: CLLocationCoordinate2D, latitudeDelta: CLLocationDegrees, longitudeDelta: CLLocationDegrees, completionHandlerForPlenarioDataPoints: @escaping (_ points:[PlenarioDataPoint]?, _ error: NSError?) -> Void) {
         // input: time start, time end (default today), center coordinate, lat/long delta, dataset
         // return an array of PlenarioDataPoint
         
@@ -95,17 +95,17 @@ extension PlenarioClient {
         let parameters: [String:String] = [PlenarioClient.ParameterKeys.LocationGeomWithin : geoJSONString]
         
         // create URL for crime data
-        let url = plenarioCrimeURLFromParameters(parameters)
+        let url = plenarioCrimeURLFromParameters(parameters as [String : AnyObject])
         
         taskForGetMethod(url) { (result, error) in
             if let error = error {
                 print(error)
             } else {
-                if let result = result[ResponseKeys.Objects] as? [[String:AnyObject]] {
+                if let result = result?[ResponseKeys.Objects] as? [[String:AnyObject]] {
                     let points = PlenarioDataPoint.pointsFromResults(result)
-                    completionHandlerForPlenarioDataPoints(points: points, error: nil)
+                    completionHandlerForPlenarioDataPoints(points, nil)
                 } else {
-                    completionHandlerForPlenarioDataPoints(points: nil, error: NSError(domain: "getLocations", code: 0, userInfo: [NSLocalizedDescriptionKey: "could not parse getLocations"]))
+                    completionHandlerForPlenarioDataPoints(nil, NSError(domain: "getLocations", code: 0, userInfo: [NSLocalizedDescriptionKey: "could not parse getLocations"]))
                 }
             }
         }
@@ -113,7 +113,7 @@ extension PlenarioClient {
     }
     
 //    func getPlenarioDataPointsWithinTimeframe
-    func getPlenarioDataPointsWithTimeframe(centerCoordinate: CLLocationCoordinate2D, latitudeDelta: CLLocationDegrees, longitudeDelta: CLLocationDegrees, startDate: NSDate, endDate: NSDate, completionHandlerForPlenarioDataPoints: (points:[PlenarioDataPoint]?, error: NSError?) -> Void) {
+    func getPlenarioDataPointsWithTimeframe(_ centerCoordinate: CLLocationCoordinate2D, latitudeDelta: CLLocationDegrees, longitudeDelta: CLLocationDegrees, startDate: Date, endDate: Date, completionHandlerForPlenarioDataPoints: @escaping (_ points:[PlenarioDataPoint]?, _ error: NSError?) -> Void) {
         
         // create dates
         let stringStartDate = plenarioDateStringFromNSDate(startDate)
@@ -128,23 +128,23 @@ extension PlenarioClient {
                                            PlenarioClient.ParameterKeys.EndDate : stringEndDate]
         
         // create URL for crime data
-        let url = plenarioCrimeURLFromParameters(parameters)
+        let url = plenarioCrimeURLFromParameters(parameters as [String : AnyObject])
         
         taskForGetMethod(url) { (result, error) in
             if let error = error {
                 print(error)
             } else {
-                if let result = result[ResponseKeys.Objects] as? [[String:AnyObject]] {
+                if let result = result?[ResponseKeys.Objects] as? [[String:AnyObject]] {
                     let points = PlenarioDataPoint.pointsFromResults(result)
-                    completionHandlerForPlenarioDataPoints(points: points, error: nil)
+                    completionHandlerForPlenarioDataPoints(points, nil)
                 } else {
-                    completionHandlerForPlenarioDataPoints(points: nil, error: NSError(domain: "getLocations", code: 0, userInfo: [NSLocalizedDescriptionKey: "could not parse getLocations"]))
+                    completionHandlerForPlenarioDataPoints(nil, NSError(domain: "getLocations", code: 0, userInfo: [NSLocalizedDescriptionKey: "could not parse getLocations"]))
                 }
             }
         }
     }
     
-    private func getCornerCoordinates(centerCoordinate: CLLocationCoordinate2D, latitudeDelta: CLLocationDegrees, longitudeDelta: CLLocationDegrees) -> (sw: [Double], ne: [Double]) {
+    fileprivate func getCornerCoordinates(_ centerCoordinate: CLLocationCoordinate2D, latitudeDelta: CLLocationDegrees, longitudeDelta: CLLocationDegrees) -> (sw: [Double], ne: [Double]) {
         // return tuple with sw,ne [latitude, longitude] coordinates
 //        let centerCoordinate = CLLocationCoordinate2DMake(self.mapView.region.center.latitude, self.mapView.region.center.longitude)
         
@@ -165,7 +165,7 @@ extension PlenarioClient {
         return (sw,ne)
     }
     
-    private func geoJSONPolygonStringFromCoordinates(bottomLeft: [Double], topRight: [Double]) -> String {
+    fileprivate func geoJSONPolygonStringFromCoordinates(_ bottomLeft: [Double], topRight: [Double]) -> String {
         // input: bottom left and top right coordinates, return geoJSON string
         // output:
         // {"type":"Polygon","coordinates":[[[-87.66600608825684,41.85226942321293],[-87.66643524169922,41.86687633156873],[-87.63918399810791,41.867259837816974],[-87.6384973526001,41.85271694915769],[-87.66600608825684,41.85226942321293]]]}
@@ -180,14 +180,14 @@ extension PlenarioClient {
         return geoJSONDictionary
     }
     
-    private func plenarioDateStringFromNSDate(date: NSDate) -> String {
+    fileprivate func plenarioDateStringFromNSDate(_ date: Date) -> String {
         // input: NSDate object
         // output: YYYY-MM-DD
         
         // set date formatter
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyy-M-d"
-        return formatter.stringFromDate(date)
+        return formatter.string(from: date)
     }
     
     

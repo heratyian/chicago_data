@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		970CA1D6A8236653837016C7 /* Pods_opengrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41531FF68DB420DC64C97DF /* Pods_opengrid.framework */; };
+		BEAFD941C9169441C3968C0A /* Pods_opengridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D33CF3CE17B61A9BDBC995E /* Pods_opengridTests.framework */; };
 		CD2E89A21D85DA77009DDDBE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E89A11D85DA77009DDDBE /* DetailViewController.swift */; };
 		CD3EE6961D8F3ED50055283D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD865A8A1D70DDFA0049424E /* SettingsViewController.swift */; };
 		CD4FA7FC1D907944001309B8 /* opengridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1F6701D694D3000EBF31B /* opengridTests.swift */; };
@@ -23,6 +24,7 @@
 		CDA1F6661D694D3000EBF31B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA1F6641D694D3000EBF31B /* LaunchScreen.storyboard */; };
 		CDA1F67C1D694D3000EBF31B /* opengridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1F67B1D694D3000EBF31B /* opengridUITests.swift */; };
 		CDCD4C0C1D6A6DF20018C21F /* PlenarioDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD4C0B1D6A6DF20018C21F /* PlenarioDataPoint.swift */; };
+		E6DEFAE6A43DEF935229A11E /* Pods_opengridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE8505E50A2AE6114781B0A /* Pods_opengridUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6DE8505E50A2AE6114781B0A /* Pods_opengridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_opengridUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75136F50709B5D59026F2BED /* Pods-opengridUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opengridUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opengridUITests/Pods-opengridUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D33CF3CE17B61A9BDBC995E /* Pods_opengridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_opengridTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43F843CBDD9A4E0A24AF428 /* Pods-opengridTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opengridTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opengridTests/Pods-opengridTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C70982AF0FB2E65A49AB22DC /* Pods-opengrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opengrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opengrid/Pods-opengrid.debug.xcconfig"; sourceTree = "<group>"; };
 		CD2E89A11D85DA77009DDDBE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD4FA7F31D9078A9001309B8 /* Chicago_DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chicago_DataTests.swift; sourceTree = "<group>"; };
@@ -67,7 +73,9 @@
 		CDA1F67D1D694D3000EBF31B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDCD4C0B1D6A6DF20018C21F /* PlenarioDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlenarioDataPoint.swift; sourceTree = "<group>"; };
 		CED2D2D97ADDA12A159B5468 /* Pods-opengrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opengrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-opengrid/Pods-opengrid.release.xcconfig"; sourceTree = "<group>"; };
+		D7EC5D703F7EF3C7BFD49531 /* Pods-opengridUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opengridUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-opengridUITests/Pods-opengridUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E41531FF68DB420DC64C97DF /* Pods_opengrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_opengrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEBDB789650FD3986CC4287A /* Pods-opengridTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opengridTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-opengridTests/Pods-opengridTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAFD941C9169441C3968C0A /* Pods_opengridTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6DEFAE6A43DEF935229A11E /* Pods_opengridUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +111,10 @@
 			children = (
 				C70982AF0FB2E65A49AB22DC /* Pods-opengrid.debug.xcconfig */,
 				CED2D2D97ADDA12A159B5468 /* Pods-opengrid.release.xcconfig */,
+				C43F843CBDD9A4E0A24AF428 /* Pods-opengridTests.debug.xcconfig */,
+				FEBDB789650FD3986CC4287A /* Pods-opengridTests.release.xcconfig */,
+				75136F50709B5D59026F2BED /* Pods-opengridUITests.debug.xcconfig */,
+				D7EC5D703F7EF3C7BFD49531 /* Pods-opengridUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -227,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				E41531FF68DB420DC64C97DF /* Pods_opengrid.framework */,
+				7D33CF3CE17B61A9BDBC995E /* Pods_opengridTests.framework */,
+				6DE8505E50A2AE6114781B0A /* Pods_opengridUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,12 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDA1F6801D694D3000EBF31B /* Build configuration list for PBXNativeTarget "opengrid" */;
 			buildPhases = (
-				7228D4DBE3BD96849F758FE2 /* Check Pods Manifest.lock */,
+				7228D4DBE3BD96849F758FE2 /* [CP] Check Pods Manifest.lock */,
 				CDA1F6541D694D3000EBF31B /* Sources */,
 				CDA1F6551D694D3000EBF31B /* Frameworks */,
 				CDA1F6561D694D3000EBF31B /* Resources */,
-				AFA3296B36CD212018F11207 /* Embed Pods Frameworks */,
-				42AF4A710C5068EEF50590CC /* Copy Pods Resources */,
+				AFA3296B36CD212018F11207 /* [CP] Embed Pods Frameworks */,
+				42AF4A710C5068EEF50590CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,9 +274,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDA1F6831D694D3000EBF31B /* Build configuration list for PBXNativeTarget "opengridTests" */;
 			buildPhases = (
+				7F2A6C9F6F25F7E4179ABC93 /* [CP] Check Pods Manifest.lock */,
 				CDA1F6681D694D3000EBF31B /* Sources */,
 				CDA1F6691D694D3000EBF31B /* Frameworks */,
 				CDA1F66A1D694D3000EBF31B /* Resources */,
+				F4074FBEA90A0DAC86F2EBE0 /* [CP] Embed Pods Frameworks */,
+				0831D2AEEF3EBEB63E4B2302 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,9 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDA1F6861D694D3000EBF31B /* Build configuration list for PBXNativeTarget "opengridUITests" */;
 			buildPhases = (
+				4209AD0C9F184B8C3E97DFBA /* [CP] Check Pods Manifest.lock */,
 				CDA1F6731D694D3000EBF31B /* Sources */,
 				CDA1F6741D694D3000EBF31B /* Frameworks */,
 				CDA1F6751D694D3000EBF31B /* Resources */,
+				25E8FC52DC068C8610D52C65 /* [CP] Embed Pods Frameworks */,
+				DDCE9DD54CD6EF8085A7D924 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,13 +324,20 @@
 				TargetAttributes = {
 					CDA1F6571D694D3000EBF31B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZS6TM2NW2R;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 					};
 					CDA1F66B1D694D3000EBF31B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZS6TM2NW2R;
+						LastSwiftMigration = 0830;
 						TestTargetID = CDA1F6571D694D3000EBF31B;
 					};
 					CDA1F6761D694D3000EBF31B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZS6TM2NW2R;
+						LastSwiftMigration = 0830;
 						TestTargetID = CDA1F6571D694D3000EBF31B;
 					};
 				};
@@ -361,14 +390,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42AF4A710C5068EEF50590CC /* Copy Pods Resources */ = {
+		0831D2AEEF3EBEB63E4B2302 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-opengridTests/Pods-opengridTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25E8FC52DC068C8610D52C65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-opengridUITests/Pods-opengridUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4209AD0C9F184B8C3E97DFBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		42AF4A710C5068EEF50590CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,34 +450,79 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-opengrid/Pods-opengrid-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7228D4DBE3BD96849F758FE2 /* Check Pods Manifest.lock */ = {
+		7228D4DBE3BD96849F758FE2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AFA3296B36CD212018F11207 /* Embed Pods Frameworks */ = {
+		7F2A6C9F6F25F7E4179ABC93 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AFA3296B36CD212018F11207 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-opengrid/Pods-opengrid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDCE9DD54CD6EF8085A7D924 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-opengridUITests/Pods-opengridUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4074FBEA90A0DAC86F2EBE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-opengridTests/Pods-opengridTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -567,11 +686,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZS6TM2NW2R;
 				INFOPLIST_FILE = opengrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.chicagodata;
 				PRODUCT_NAME = "Chicago Data";
-				PROVISIONING_PROFILE = "33dbce6c-b5f6-4283-8d45-eccf079f57a3";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -582,56 +705,72 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZS6TM2NW2R;
 				INFOPLIST_FILE = opengrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.chicagodata;
 				PRODUCT_NAME = "Chicago Data";
-				PROVISIONING_PROFILE = "33dbce6c-b5f6-4283-8d45-eccf079f57a3";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		CDA1F6841D694D3000EBF31B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C43F843CBDD9A4E0A24AF428 /* Pods-opengridTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZS6TM2NW2R;
 				INFOPLIST_FILE = opengridTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.opengridTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/opengrid.app/opengrid";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chicago Data.app/Chicago Data";
 			};
 			name = Debug;
 		};
 		CDA1F6851D694D3000EBF31B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBDB789650FD3986CC4287A /* Pods-opengridTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZS6TM2NW2R;
 				INFOPLIST_FILE = opengridTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.opengridTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/opengrid.app/opengrid";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chicago Data.app/Chicago Data";
 			};
 			name = Release;
 		};
 		CDA1F6871D694D3000EBF31B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75136F50709B5D59026F2BED /* Pods-opengridUITests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = ZS6TM2NW2R;
 				INFOPLIST_FILE = opengridUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.opengridUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = opengrid;
 			};
 			name = Debug;
 		};
 		CDA1F6881D694D3000EBF31B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7EC5D703F7EF3C7BFD49531 /* Pods-opengridUITests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = ZS6TM2NW2R;
 				INFOPLIST_FILE = opengridUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ianheraty.opengridUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = opengrid;
 			};
 			name = Release;

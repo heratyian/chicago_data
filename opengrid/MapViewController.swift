@@ -25,8 +25,8 @@ class MapViewController: UIViewController {
     var locationManager: CLLocationManager!
     var placemark: MKPlacemark?
     var dataPoint: PlenarioDataPoint?   // sent to detailViewController
-    var startDate: NSDate!
-    var endDate: NSDate!
+    var startDate: Date!
+    var endDate: Date!
     
     // MARK: Constants
     let LongitudeDelta = 2200.0
@@ -44,46 +44,46 @@ class MapViewController: UIViewController {
     }
     
     
-    @IBAction func queryButtonTapped(sender: AnyObject) {
-        performSegueWithIdentifier(SettingsSegueID, sender: self)
+    @IBAction func queryButtonTapped(_ sender: AnyObject) {
+        performSegue(withIdentifier: SettingsSegueID, sender: self)
     }
     
-    private func createDates() {
+    fileprivate func createDates() {
         // create dates
-        let todaysDate = NSDate()
-        let thirtyDaysAgo = NSDate(timeInterval: -2592000.0, sinceDate: todaysDate)
+        let todaysDate = Date()
+        let thirtyDaysAgo = Date(timeInterval: -2592000.0, since: todaysDate)
         
         startDate = thirtyDaysAgo
         endDate = todaysDate
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == SettingsSegueID {
             
             var settingsVC: SettingsViewController = SettingsViewController()
-            settingsVC = segue.destinationViewController as! SettingsViewController
+            settingsVC = segue.destination as! SettingsViewController
             settingsVC.delegate = self
             
-            settingsVC.startDate = self.startDate
-            settingsVC.endDate = self.endDate
+            settingsVC.startDate = (self.startDate! as NSDate) as Date!
+            settingsVC.endDate = (self.endDate! as NSDate) as Date!
             
             settingsVC.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
-            settingsVC.modalPresentationStyle = .OverCurrentContext
+            settingsVC.modalPresentationStyle = .overCurrentContext
             
         } else if segue.identifier == DetailSegueID {
             
             var detailViewController: DetailViewController = DetailViewController()
-            detailViewController = segue.destinationViewController as! DetailViewController
+            detailViewController = segue.destination as! DetailViewController
             
             detailViewController.dataPoint = self.dataPoint!
             
             detailViewController.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
-            detailViewController.modalPresentationStyle = .OverCurrentContext
+            detailViewController.modalPresentationStyle = .overCurrentContext
         }
     }
 
-    private func queryDatabase(start: NSDate, end: NSDate) {
+    fileprivate func queryDatabase(_ start: Date, end: Date) {
         
         mapView.removeAnnotations(mapView.annotations)
         
@@ -113,7 +113,7 @@ class MapViewController: UIViewController {
         })
     }
     
-    private func createAnnotationWithDataPoint(dataPoint: PlenarioDataPoint) {
+    fileprivate func createAnnotationWithDataPoint(_ dataPoint: PlenarioDataPoint) {
         // input: PlenarioDataPoint Object
         // create annotation and add it to mapview
         
@@ -134,7 +134,7 @@ class MapViewController: UIViewController {
 // MARK: SettingsViewControllerDelegate
 extension MapViewController: SettingsViewControllerDelegate {
 
-    func giveStartAndEndDate(start: NSDate, end: NSDate) {
+    func giveStartAndEndDate(_ start: Date, end: Date) {
         queryDatabase(start, end: end)
     }
 }
@@ -142,11 +142,11 @@ extension MapViewController: SettingsViewControllerDelegate {
 // MARK: MKMapViewDelegate
 extension MapViewController: MKMapViewDelegate {
     
-    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("tapped annotation")
     }
     
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         print("tapped accesory buttons")
         
         // fetch datapoint
@@ -155,17 +155,17 @@ extension MapViewController: MKMapViewDelegate {
         self.dataPoint = annotation.dataPoint!
         
         // segue to detailViewController
-        performSegueWithIdentifier(DetailSegueID, sender: self)
+        performSegue(withIdentifier: DetailSegueID, sender: self)
     }
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "pin"
         var view: MKPinAnnotationView
         
         view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
         view.canShowCallout = true
         view.calloutOffset = CGPoint(x: -5, y: 5)
-        view.rightCalloutAccessoryView = UIButton(type:.DetailDisclosure) as UIView
+        view.rightCalloutAccessoryView = UIButton(type:.detailDisclosure) as UIView
         
         return view
     }
@@ -174,7 +174,7 @@ extension MapViewController: MKMapViewDelegate {
 // MARK: CLLocationManager
 extension MapViewController: CLLocationManagerDelegate {
     
-    private func initLocationManager() {
+    fileprivate func initLocationManager() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.distanceFilter = kCLDistanceFilterNone
@@ -183,7 +183,7 @@ extension MapViewController: CLLocationManagerDelegate {
     }
     
     // TODO: if user location, set to user current location, else chicago downtown
-    private func setLocation(city: String) {
+    fileprivate func setLocation(_ city: String) {
         let geocoder = CLGeocoder()
         
         geocoder.geocodeAddressString(city) { (placemarks, error) in
