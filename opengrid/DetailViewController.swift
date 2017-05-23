@@ -25,8 +25,8 @@ class DetailViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    @IBAction func tappedCloseButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion:nil)
+    @IBAction func tappedCloseButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion:nil)
     }
 }
 
@@ -35,18 +35,18 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataPoint.dataArray.count
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
         
         let row = indexPath.row
         cell.textLabel?.text = dataPoint.dataArray[row].0
@@ -55,8 +55,8 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     

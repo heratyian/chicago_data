@@ -1,0 +1,18 @@
+PODS:
+  - DatePickerDialog (1.1.7)
+  - GeoJSON (0.3.2)
+  - SwiftyButton (0.6.0)
+
+DEPENDENCIES:
+  - DatePickerDialog
+  - GeoJSON
+  - SwiftyButton
+
+SPEC CHECKSUMS:
+  DatePickerDialog: bd5e7e92e4da2c6a8966b28d5f5d8f335d6c2c63
+  GeoJSON: 7162f77cc8237e6f8ca77cedf3974b821edd0589
+  SwiftyButton: 4c9b61c499f172971a1b8c2eebbbdc20a26d8a08
+
+PODFILE CHECKSUM: 66f6fa9476b315495debd392828ff95aa7703716
+
+COCOAPODS: 1.2.0
